@@ -3,10 +3,6 @@ import plan from '../assets/plan3.jpg';
 import plan2 from '../assets/plan2.jpg'
 import { Button } from './Button.tsx';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
-import { ServiceCard } from './ServiceCard.tsx';
-import develop from '../assets/develop.jpg';
-import develop1 from '../assets/develop2.avif';
-import develop2 from '../assets/constraction.jpg';
 
 export const Body: React.FC = () => {
   return (
@@ -65,9 +61,28 @@ export const Body: React.FC = () => {
           <SectionSubTitle title="cur services" />
           <h2 className="text-6xl font-bold">Services We <br/>  Provide</h2>
           <div className="flex gap-3 justify-between h-[330px]">
-            <ServiceCard title="Residential Construction" image={develop} />
-            <ServiceCard title="Interior Design" image={develop1} />
-            <ServiceCard title="Interior Fitt-Out" image={develop2} />
+            {/*{servicesImages.map(service => (*/}
+            {/*  // <ServiceCard key={service.id} title={service.title} image={service.image} />*/}
+            {/*  <div className={`bg-[url("${service.image}")] relative bg-cover size-full flex items-end`} >*/}
+            {/*    <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent"></div>*/}
+            {/*    <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">{service.title}</p>*/}
+            {/*  </div>*/}
+            {/*))}*/}
+            <div className={`bg-[url("assets/develop.jpg")] relative bg-cover size-full flex items-end`} >
+              <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent" />
+              <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">Residential Construction</p>
+            </div>
+            <div className={`bg-[url("assets/develop2.avif")] relative bg-cover size-full flex items-end`} >
+              <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent" />
+              <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">Interior Design</p>
+            </div>
+            <div className={`bg-[url("assets/constraction.jpg")] relative bg-cover size-full flex items-end`} >
+              <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent" />
+              <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">Interior Fitt-Out</p>
+            </div>
+            
+            {/*<ServiceCard title="Interior Design" image={develop1} />*/}
+            {/*<ServiceCard title="Interior Fitt-Out" image={develop2} />*/}
           </div>
         </div>
       </section>

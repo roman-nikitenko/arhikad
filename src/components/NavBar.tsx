@@ -2,9 +2,9 @@ import React from 'react';
 
 export const NavBar: React.FC = () => {
   return (
-    <div className="py-4 flex items-center justify-between">
+    <div className="py-4 flex items-center max-w-screen-2xl m-auto justify-between">
       <div className="logo text-white flex text-3xl font-bold items-center">
-        Arhi<p className="text-emerald-600">kad</p>
+        Arhi<p className="text-[color:var(--accent-color)]">kad</p>
       </div>
       <div className="navbar text-white">
         <ul className="flex gap-10">

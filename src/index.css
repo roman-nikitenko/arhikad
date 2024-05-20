@@ -11,7 +11,7 @@
 }
 
 .accent-text {
-  @apply text-emerald-700
+  @apply text-[var(--accent-color)]
 }
 
 .section-md {
@@ -20,4 +20,8 @@
 
 .nav-link {
   @apply hover:text-emerald-700 transition cursor-pointer
+}
+
+:root {
+  --accent-color: #1D545B
 }
