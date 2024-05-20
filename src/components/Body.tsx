@@ -4,6 +4,9 @@ import plan2 from '../assets/plan2.jpg'
 import { Button } from './Button.tsx';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
 import { ServiceCard } from './ServiceCard.tsx';
+import develop from '../assets/develop.jpg';
+import develop1 from '../assets/develop2.avif';
+import develop2 from '../assets/constraction.jpg';
 
 export const Body: React.FC = () => {
   return (
@@ -62,9 +65,9 @@ export const Body: React.FC = () => {
           <SectionSubTitle title="cur services" />
           <h2 className="text-6xl font-bold">Services We <br/>  Provide</h2>
           <div className="flex gap-3 justify-between h-[330px]">
-            <ServiceCard />
-            <ServiceCard />
-            <ServiceCard />
+            <ServiceCard title="Residential Construction" image={develop} />
+            <ServiceCard title="Interior Design" image={develop1} />
+            <ServiceCard title="Interior Fitt-Out" image={develop2} />
           </div>
         </div>
       </section>
