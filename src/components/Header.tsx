@@ -5,13 +5,12 @@ import { Button } from './Button.tsx';
 export const Header: React.FC = () => {
   
   return (
-    <header className="header bg-[url('assets/plan.avif')] bg-cover h-screen w-full mb-[80px]">
+    <header className="header bg-[url('assets/plan.avif')]  bg-cover h-screen w-full mb-[80px]">
       <div className="bg-[#24272B]/[0.5] h-full">
         <div className="backdrop-blur-sm bg-white/10">
-
           <NavBar />
         </div>
-        <div className="wrapper max-w-screen-2xl m-auto">
+        <div className="wrapper md:px-10 2xl:px-0 max-w-screen-2xl m-auto">
           <div className="h-screen flex items-center">
             <div className="title w-[700px] flex-col gap-y-2 text-white">
               <h1 className="text-white text-7xl font-bold mb-2">

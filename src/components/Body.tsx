@@ -65,13 +65,6 @@ export const Body: React.FC = () => {
           <SectionSubTitle title="cur services" />
           <h2 className="text-6xl font-bold">Services We <br/>  Provide</h2>
           <div className="flex gap-3 justify-between h-[330px]">
-            {/*{servicesImages.map(service => (*/}
-            {/*  // <ServiceCard key={service.id} title={service.title} image={service.image} />*/}
-            {/*  <div className={`bg-[url("${service.image}")] relative bg-cover size-full flex items-end`} >*/}
-            {/*    <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent"></div>*/}
-            {/*    <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">{service.title}</p>*/}
-            {/*  </div>*/}
-            {/*))}*/}
             <div className={`bg-[url("assets/develop.jpg")] relative bg-cover size-full flex items-end`} >
               <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent" />
               <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">Residential Construction</p>
@@ -84,9 +77,6 @@ export const Body: React.FC = () => {
               <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent" />
               <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">Interior Fitt-Out</p>
             </div>
-            
-            {/*<ServiceCard title="Interior Design" image={develop1} />*/}
-            {/*<ServiceCard title="Interior Fitt-Out" image={develop2} />*/}
           </div>
         </div>
       </section>
@@ -102,19 +92,19 @@ export const Body: React.FC = () => {
             <PortfolioCard
               title="Building constracrions in Bucha"
               subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
-              typeOfWork="Construction"
+              typeOfWork="Remodeling"
               backgroundImage={construction1}
             />
             <PortfolioCard
-              title="Building constracrions in Bucha"
+              title="Kitchen remodeling in Hollywood Hills"
               subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
               typeOfWork="Construction"
               backgroundImage={construction2}
             />
             <PortfolioCard
-              title="Building constracrions in Bucha"
+              title="Office remodeling in Hollywood Hills"
               subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
-              typeOfWork="Construction"
+              typeOfWork="Design"
               backgroundImage={construction3}
             />
           </div>
