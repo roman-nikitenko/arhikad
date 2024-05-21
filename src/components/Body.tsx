@@ -3,6 +3,10 @@ import plan from '../assets/plan3.jpg';
 import plan2 from '../assets/plan2.jpg'
 import { Button } from './Button.tsx';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
+import { PortfolioCard } from './PortfolioCard.tsx';
+import construction1 from '../assets/portfolio/constraction1.jpg';
+import construction2 from '../assets/portfolio/constraction2.jpg';
+import construction3 from '../assets/portfolio/constraction3.jpg';
 
 export const Body: React.FC = () => {
   return (
@@ -83,6 +87,36 @@ export const Body: React.FC = () => {
             
             {/*<ServiceCard title="Interior Design" image={develop1} />*/}
             {/*<ServiceCard title="Interior Fitt-Out" image={develop2} />*/}
+          </div>
+        </div>
+      </section>
+      <section className="section-md">
+        <div className="flex flex-col gap-y-10">
+          <div className="flex flex-col gap-y-3">
+            <p className="text-emerald-700 uppercase">/past projects</p>
+            <h2 className="text-3xl font-bold">
+              Our project's outcomes <br/> are self-explanatory
+            </h2>
+          </div>
+          <div className="flex gap-x-6">
+            <PortfolioCard
+              title="Building constracrions in Bucha"
+              subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
+              typeOfWork="Construction"
+              backgroundImage={construction1}
+            />
+            <PortfolioCard
+              title="Building constracrions in Bucha"
+              subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
+              typeOfWork="Construction"
+              backgroundImage={construction2}
+            />
+            <PortfolioCard
+              title="Building constracrions in Bucha"
+              subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
+              typeOfWork="Construction"
+              backgroundImage={construction3}
+            />
           </div>
         </div>
       </section>
