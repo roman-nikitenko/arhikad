@@ -3,7 +3,6 @@ import { NavBar } from './NavBar.tsx';
 import { Button } from './Button.tsx';
 
 export const Header: React.FC = () => {
-  
   return (
     <header className="header bg-[url('assets/plan.avif')]  bg-cover h-screen w-full mb-[80px]">
       <div className="bg-[#24272B]/[0.5] h-full">

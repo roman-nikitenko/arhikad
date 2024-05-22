@@ -6,8 +6,8 @@ type SocialNetworkProps = {
 
 export const SocialNetwork: React.FC<SocialNetworkProps> = ({ image }) => {
   return (
-    <div className="bg-emerald-700 flex justify-center items-center size-10">
-      <img src={image} className="size-7" alt="social media"/>
+    <div className="bg-[var(--accent-color)] flex justify-center items-center size-10">
+      <img src={image} className="size-6" alt="social media"/>
     </div>
   );
 };
