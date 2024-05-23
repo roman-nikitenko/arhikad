@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React  from 'react';
 import plan from '../assets/plan3.jpg';
 import plan2 from '../assets/plan2.jpg'
 import { Button } from './Button.tsx';
@@ -9,14 +9,15 @@ import construction2 from '../assets/portfolio/constraction2.jpg';
 import construction3 from '../assets/portfolio/constraction3.jpg';
 import { useInView } from 'react-intersection-observer';
 
-export const Body: React.FC = () => {
+type BodyProp = {
+  aboutSectionRef: React.RefObject<HTMLDivElement>;
+  servicesSectionRef: React.RefObject<HTMLDivElement>;
+  projectsSectionRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, projectsSectionRef }) => {
   const { ref: madeSection, inView } = useInView();
   const { ref: aboutSection, inView: inViewAbout } = useInView();
-  
-  const aboutSectionRef = useRef<HTMLDivElement>(null);
-  // const servicesSectionRef = useRef<HTMLDivElement>(null);
-  // const projectsSectionRef = useRef<HTMLDivElement>(null);
-  
   
   return (
     <div className="max-w-screen-2xl m-auto flex flex-col items-center gap-y-[100px]">
@@ -28,7 +29,7 @@ export const Body: React.FC = () => {
           border-t-[55px] border-t-white
           border-r-[55px] border-r-transparent`}/>
         </div>
-        <div ref={aboutSectionRef} className="w-[500px] flex flex-col gap-7 justify-center">
+        <div ref={aboutSectionRef} id="aboutSectionRef" className="w-[500px] flex flex-col gap-7 justify-center">
           <p className="text-emerald-700 uppercase">/about us</p>
           <h2 className="text-3xl font-bold">A group of reliability and expertise contractors</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur corporis deleniti dicta dolor dolorem doloribus ducimus earum est ex explicabo fuga, impedit ipsum, nostrum officiis tempora unde vel voluptatum?</p>
@@ -70,7 +71,7 @@ export const Body: React.FC = () => {
           <img src={plan2} className="w-full h-full object-cover " alt=""/>
         </div>
       </section>
-      <section className="section-md">
+      <section ref={servicesSectionRef} className="section-md">
         <div className="w-full flex flex-col gap-y-8">
           <SectionSubTitle title="cur services" />
           <h2 className="text-6xl font-bold">Services We <br/>  Provide</h2>
@@ -90,7 +91,7 @@ export const Body: React.FC = () => {
           </div>
         </div>
       </section>
-      <section className="section-md">
+      <section ref={projectsSectionRef} className="section-md">
         <div className="flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-3">
             <p className="text-emerald-700 uppercase">/past projects</p>

@@ -1,13 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavBar } from './NavBar.tsx';
 import { Button } from './Button.tsx';
 
-export const Header: React.FC = () => {
+type HeaderProp = {
+  aboutSectionRef: React.RefObject<HTMLDivElement>;
+  servicesSectionRef: React.RefObject<HTMLDivElement>;
+  projectsSectionRef: React.RefObject<HTMLDivElement>;
+}
+
+export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionRef, projectsSectionRef }) => {
+  const [upToTop, setToTop] = useState<boolean>();
+
+  const isSticky = () => {
+    const scrollTop = window.scrollY;
+    const heightScreen = window.innerHeight;
+    setToTop(scrollTop > heightScreen - 50)
+  };
+  
+  useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+      window.removeEventListener('scroll', isSticky);
+    };
+  });
+
   return (
     <header className="header bg-[url('assets/plan.avif')]  bg-cover h-screen w-full mb-[80px]">
       <div className="bg-[#24272B]/[0.5] h-full">
-        <div className="backdrop-blur-sm bg-white/10">
-          <NavBar />
+        <div className={`backdrop-blur-sm fixed z-40 w-full transition ${upToTop ? 'bg-emerald-900/30' : 'bg-white/10'} `}>
+          <NavBar aboutSectionRef={aboutSectionRef} servicesSectionRef={servicesSectionRef} projectsSectionRef={projectsSectionRef} />
         </div>
         <div className="wrapper md:px-10 2xl:px-0 max-w-screen-2xl m-auto">
           <div className="h-screen flex items-center">

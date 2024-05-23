@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
       <div className="flex w-full items-center justify-between">
         <h1 className="text-3xl font-bold">Subscribe Newsletter <br/> For Latest Updates</h1>
         <div className="flex h-8">
-          <input className="border w-[300px] border-black " type='text'/>
+          <input className="border outline pl-3 outline-0 w-[300px] border-black " type='text'/>
           <button className="bg-[var(--accent-color)] text-white px-2" >Subscribe</button>
         </div>
       </div>
