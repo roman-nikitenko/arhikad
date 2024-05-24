@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import plan from '../assets/plan3.jpg';
 import plan2 from '../assets/plan2.jpg'
 import { Button } from './Button.tsx';
@@ -8,6 +8,7 @@ import construction1 from '../assets/portfolio/constraction1.jpg';
 import construction2 from '../assets/portfolio/constraction2.jpg';
 import construction3 from '../assets/portfolio/constraction3.jpg';
 import { useInView } from 'react-intersection-observer';
+import { TestimonialsSection } from './TestimonialsSection.tsx';
 
 type BodyProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -121,6 +122,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           </div>
         </div>
       </section>
+        <TestimonialsSection />
     </div>
   );
 };
