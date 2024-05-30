@@ -9,6 +9,7 @@ import construction2 from '../assets/portfolio/constraction2.jpg';
 import construction3 from '../assets/portfolio/constraction3.jpg';
 import { useInView } from 'react-intersection-observer';
 import { TestimonialsSection } from './TestimonialsSection.tsx';
+import { QuestionSection } from './questionSection.tsx';
 
 type BodyProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -30,7 +31,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           border-t-[55px] border-t-white
           border-r-[55px] border-r-transparent`}/>
         </div>
-        <div ref={aboutSectionRef} id="aboutSectionRef" className="w-[500px] flex flex-col gap-7 justify-center">
+        <div ref={aboutSectionRef} id="aboutSectionRef" className="w-[500px] flex flex-col gap-7 justify-center scroll-mt-28">
           <p className="text-emerald-700 uppercase">/about us</p>
           <h2 className="text-3xl font-bold">A group of reliability and expertise contractors</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur corporis deleniti dicta dolor dolorem doloribus ducimus earum est ex explicabo fuga, impedit ipsum, nostrum officiis tempora unde vel voluptatum?</p>
@@ -72,7 +73,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           <img src={plan2} className="w-full h-full object-cover " alt=""/>
         </div>
       </section>
-      <section ref={servicesSectionRef} className="section-md">
+      <section ref={servicesSectionRef} className="section-md scroll-mt-28">
         <div className="w-full flex flex-col gap-y-8">
           <SectionSubTitle title="cur services" />
           <h2 className="text-6xl font-bold">Services We <br/>  Provide</h2>
@@ -92,7 +93,8 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           </div>
         </div>
       </section>
-      <section ref={projectsSectionRef} className="section-md">
+      <QuestionSection />
+      <section ref={projectsSectionRef} className="section-md scroll-mt-20">
         <div className="flex flex-col gap-y-10">
           <div className="flex flex-col gap-y-3">
             <p className="text-emerald-700 uppercase">/past projects</p>
@@ -122,7 +124,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           </div>
         </div>
       </section>
-        <TestimonialsSection />
+      <TestimonialsSection />
     </div>
   );
 };

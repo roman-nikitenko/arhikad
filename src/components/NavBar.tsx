@@ -11,14 +11,15 @@ export const NavBar: React.FC<NavBarProp> = ({ aboutSectionRef, servicesSectionR
   const moveToSection = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>, refSection:React.RefObject<HTMLDivElement>) => {
     e.preventDefault();
     refSection.current?.scrollIntoView({
-      behavior: 'smooth'
+      inline: "nearest",
+      behavior: "smooth",
     })
   }
   
   return (
     <div className="py-4 md:px-10 2xl:px-0 flex items-center  max-w-screen-2xl m-auto justify-between">
       <div className="logo text-white flex text-3xl font-bold items-center">
-        Arhi<p className="text-[color:var(--accent-color)]">kad</p>
+        Arhi<p className="text-[color:var(--accent-color)]">kadnv</p>
       </div>
       <div className="navbar text-white">
         <ul className="flex gap-10">

@@ -159,14 +159,14 @@ export const TestimonialsSection: React.FC = () => {
   console.log(testimonialsRef.current?.offsetWidth)
   
   return (
-    <section className="bg-[#191919] py-20 flex flex-col gap-y-14 w-full">
+    <section className="bg-[#191919] py-20 flex flex-col overflow-hidden gap-y-14 w-full">
       <div className="max-w-screen-lg m-auto w-full">
         <div className="flex flex-col  items-start gap-y-4">
           <div className="bg-[color:var(--accent-color)] text-white  py-1 px-2 text-xs rounded-full">Testimonials</div>
           <h1 className="uppercase text-white text-5xl ">messages from our <br/> valuable <span className="text-[var(--accent-color)]">customers</span> </h1>
         </div>
       </div>
-      <div ref={testimonialsRef} className="columns-5 w-fit h-[400px] animate-testimonials-animation overflow-hidden">
+      <div ref={testimonialsRef} className="columns-5 w-fit h-[400px] animate-testimonials-animation">
         {testimonials.map(testimonial => (
           <TestimonialCard testimonial={testimonial}/>
         ))}

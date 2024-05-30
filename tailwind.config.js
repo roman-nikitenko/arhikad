@@ -8,12 +8,12 @@ export default {
     extend: {
       keyframes: {
         'testimonials-animation': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-60px)' }
+          '0%, 100%': { transform: 'translateX(-60px)' },
+          '50%': { transform: 'translateX(60px)' }
         }
       },
       animation: {
-        'testimonials-animation': 'testimonials-animation 20s infinite'
+        'testimonials-animation': 'testimonials-animation 15s infinite'
       },
       backgroundImage: {
         'herro-image': "url('/assets/building.jpg')"
