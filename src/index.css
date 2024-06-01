@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --accent-color: #1D545B
+}
+
 .bold-text {
   @apply font-bold text-5xl
 }
@@ -22,6 +26,7 @@
   @apply hover:text-emerald-700 transition cursor-pointer
 }
 
-:root {
-  --accent-color: #1D545B
+.input-form {
+  @apply border border-black pl-2 outline outline-0 w-full p-1
 }
+

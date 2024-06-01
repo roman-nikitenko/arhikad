@@ -29,16 +29,16 @@ export const NavBar: React.FC<NavBarProp> = ({ aboutSectionRef, servicesSectionR
                 top: 0,
                 behavior: 'smooth',
               })
-            }}>Home</a>
+            }}>Головна</a>
           </li>
           <li className="nav-link">
-            <a onClick={(e) => moveToSection(e, aboutSectionRef)} href="">About</a>
+            <a onClick={(e) => moveToSection(e, aboutSectionRef)} href="">Про нас</a>
           </li>
           <li className="nav-link">
-            <a onClick={(e) => moveToSection(e, servicesSectionRef)} href="">Services</a>
+            <a onClick={(e) => moveToSection(e, servicesSectionRef)} href="">Послуги</a>
           </li>
           <li className="nav-link">
-            <a onClick={(e) => moveToSection(e, projectsSectionRef)} href="">Projects</a>
+            <a onClick={(e) => moveToSection(e, projectsSectionRef)} href="">Проекти</a>
           </li>
         </ul>
       </div>

@@ -3,13 +3,11 @@ import plan from '../assets/plan3.jpg';
 import plan2 from '../assets/plan2.jpg'
 import { Button } from './Button.tsx';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
-import { PortfolioCard } from './PortfolioCard.tsx';
-import construction1 from '../assets/portfolio/constraction1.jpg';
-import construction2 from '../assets/portfolio/constraction2.jpg';
-import construction3 from '../assets/portfolio/constraction3.jpg';
 import { useInView } from 'react-intersection-observer';
 import { TestimonialsSection } from './TestimonialsSection.tsx';
 import { QuestionSection } from './questionSection.tsx';
+import { FormSection } from './FormSection.tsx';
+import { PortfolioSection } from './PortfolioSection.tsx';
 
 type BodyProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -32,7 +30,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           border-r-[55px] border-r-transparent`}/>
         </div>
         <div ref={aboutSectionRef} id="aboutSectionRef" className="w-[500px] flex flex-col gap-7 justify-center scroll-mt-28">
-          <p className="text-emerald-700 uppercase">/about us</p>
+          <p className="text-emerald-700 uppercase">/Про нас</p>
           <h2 className="text-3xl font-bold">A group of reliability and expertise contractors</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur corporis deleniti dicta dolor dolorem doloribus ducimus earum est ex explicabo fuga, impedit ipsum, nostrum officiis tempora unde vel voluptatum?</p>
           <div className="flex justify-between">
@@ -56,7 +54,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
       </section>
       <section ref={madeSection} className="section-md">
         <div className="flex flex-col gap-5 pt-6">
-          <SectionSubTitle title="why us" />
+          <SectionSubTitle title="чому ми" />
           <h2 className="text-6xl font-bold">Made By Builders <br/> Fro Builders</h2>
           <ul className="">
             <li className="">Lorem ipsum dolor sit amet.</li>
@@ -64,9 +62,6 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
             <li className="">Lorem ipsum dolor.</li>
             <li className="">Lorem ipsum dolor sit amet.</li>
           </ul>
-          <div>
-            <Button title="See more" onClick={() => {}} />
-          </div>
         </div>
         <div className="h-[440px] w-[370px] group relative">
           <div className={`absolute border border-black size-full -z-10 transform ${inView ? '-translate-x-[26px] -translate-y-[26px]' : ''} transition duration-700`} />
@@ -75,7 +70,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
       </section>
       <section ref={servicesSectionRef} className="section-md scroll-mt-28">
         <div className="w-full flex flex-col gap-y-8">
-          <SectionSubTitle title="cur services" />
+          <SectionSubTitle title="основні послуги" />
           <h2 className="text-6xl font-bold">Services We <br/>  Provide</h2>
           <div className="flex gap-3 justify-between h-[330px]">
             <div className={`bg-[url("assets/develop.jpg")] relative bg-cover size-full flex items-end`} >
@@ -94,37 +89,9 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
         </div>
       </section>
       <QuestionSection />
-      <section ref={projectsSectionRef} className="section-md scroll-mt-20">
-        <div className="flex flex-col gap-y-10">
-          <div className="flex flex-col gap-y-3">
-            <p className="text-emerald-700 uppercase">/past projects</p>
-            <h2 className="text-3xl font-bold">
-              Our project's outcomes <br/> are self-explanatory
-            </h2>
-          </div>
-          <div className="flex gap-x-6">
-            <PortfolioCard
-              title="Building constracrions in Bucha"
-              subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
-              typeOfWork="Remodeling"
-              backgroundImage={construction1}
-            />
-            <PortfolioCard
-              title="Kitchen remodeling in Hollywood Hills"
-              subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
-              typeOfWork="Construction"
-              backgroundImage={construction2}
-            />
-            <PortfolioCard
-              title="Office remodeling in Hollywood Hills"
-              subTitle="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam."
-              typeOfWork="Design"
-              backgroundImage={construction3}
-            />
-          </div>
-        </div>
-      </section>
+      <PortfolioSection projectsSectionRef={projectsSectionRef} />
       <TestimonialsSection />
+      <FormSection map={true}/>
     </div>
   );
 };
