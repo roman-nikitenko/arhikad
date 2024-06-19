@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from './Button.tsx';
 import { Modal } from './Modal.tsx';
-import { FormSection } from './FormSection.tsx';
+import { Form } from './Form.tsx';
 
 export const QuestionSection: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
@@ -9,7 +9,10 @@ export const QuestionSection: React.FC = () => {
   return (
     <>
       <Modal openModal={modalIsOpen} closeModal={() => setModalIsOpen(false)} >
-        <FormSection />
+        <div className="bg-white flex m-auto p-5">
+          <Form />
+          
+        </div>
       </Modal>
 
       <section className="overflow-hidden relative max-w-screen-2xl m-auto w-full">

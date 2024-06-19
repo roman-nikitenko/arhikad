@@ -14,9 +14,11 @@ export default {
         'fade-in': {
           from: {
             opacity: 0,
+            visibility: 'hidden'
           },
           to: {
             opacity: 1,
+            visibility: 'visible'
           }
         },
         'fade-out': {

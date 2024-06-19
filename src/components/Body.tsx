@@ -24,7 +24,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
       <section ref={aboutSection} className="section-md">
         <div className="h-[440px] relative ">
           <img src={plan} className="w-full z-0 h-full" alt='plan image'/>
-          <div className={`absolute top-0 left-0 size-[130px] border border-[var(----accent-color)] -z-10 transform ${inViewAbout ? '-translate-x-[10px] -translate-y-[10px]' : ''} transition duration-700`} />
+          <div className={`absolute top-0 left-0 size-[130px] border border-[var(--accent-color)] -z-10 transform ${inViewAbout ? '-translate-x-[10px] -translate-y-[10px]' : ''} transition duration-700`} />
           <div className={`absolute z-10  top-0 w-0 h-0 transform -translate-x-full -translate-y-full transition duration-700 ${inViewAbout ? 'translate-x-0 translate-y-0' : ''}
           border-t-[55px] border-t-white
           border-r-[55px] border-r-transparent`}/>

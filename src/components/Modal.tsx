@@ -10,11 +10,11 @@ export const Modal: FC<ModalProps> = ({ children, closeModal, openModal }) => {
   return (
     <div
       onMouseDown={closeModal} 
-      className={`flex justify-center items-center ${openModal ? "fixed bg-black left-0 top-0 right-0 bottom-0 z-50 bg-opacity-60 overflow-hidden animate-fade-in" : "fixed bg-black left-0 top-0 right-0 bottom-0 z-50 bg-opacity-60 overflow-hidden animate-fade-out"}`}
+      className={`flex justify-center items-center fixed bg-black inset-0 z-50 bg-opacity-60 backdrop-blur-sm ${openModal ? " overflow-hidden animate-fade-in" : "animate-fade-out hidden"}`}
     >
       <div 
         onMouseDown={(e) => e.stopPropagation() } 
-        className={`${openModal ? 'animate-drop' : 'animate-drop-up'} flex justify-center items-center m-auto bg-white h-fit w-fit p-5 rounded-xl`}
+        className="flex w-fit"
       >
         {children}
       </div>

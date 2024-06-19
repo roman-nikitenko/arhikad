@@ -31,3 +31,7 @@
   @apply border border-black pl-2 outline outline-0 w-full p-1
 }
 
+.carousel-button {
+  @apply text-white z-50 size-16 flex justify-center items-center fill-white rounded-full hover:bg-white/[0.3] transition duration-150
+}
+

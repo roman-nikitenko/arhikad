@@ -1,13 +1,8 @@
 import React from 'react';
 import arrow from '../assets/icons/arrow-right.svg';
+import { typeWork } from '../types/portfolio.ts';
 
 // export type typeWork = 'Construction' | 'Design' | 'Remodeling';
-
-export enum typeWork {
-  construction = "Construction",
-  design = "Design",
-  remodeling = "Remodeling",
-}
 
 type PortfolioCardProps = {
   title: string;
