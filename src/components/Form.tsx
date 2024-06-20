@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { InputField } from './InputField.tsx';
 import { Button } from './Button.tsx';
+import { ModalContext } from '../context/Context.tsx';
 
 export const Form: React.FC = () => {
   const [name, setName] = useState<string>('');
   const [phone, setPhone] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
+  
+  const { setIsOpenModal } = useContext(ModalContext)
 
   const cleanForm = () => {
     setName('');
@@ -26,6 +29,7 @@ export const Form: React.FC = () => {
     }
 
     console.log(newMessage)
+    setIsOpenModal(false)
     cleanForm()
   }
   

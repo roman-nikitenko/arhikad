@@ -21,9 +21,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projectsSect
   return (
     <>
       <Modal openModal={modalIsOpen} closeModal={() => setModalIsOpen(false)} >
-        <div className="w-[80%] m-auto">
-          <Carousel images={activePortfolio?.listOfWorks} />
-        </div>
+        <Carousel images={activePortfolio?.listOfWorks} />
       </Modal>
       <section ref={projectsSectionRef} className="section-md scroll-mt-20">
         <div className="flex flex-col gap-y-10">

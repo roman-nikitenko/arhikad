@@ -1,5 +1,5 @@
 import { PortfolioCardType, typeWork } from './types/portfolio.ts';
-import construction1 from './assets/portfolio/constraction1.jpg';
+// import construction1 from './assets/portfolio/constraction1.jpg';
 import construction2 from './assets/portfolio/constraction2.jpg';
 import construction3 from './assets/portfolio/constraction3.jpg';
 import project1 from './assets/portfolio/project1/101-BB-01-pages-1.jpg';
@@ -13,7 +13,7 @@ export const portfolioList: PortfolioCardType[] = [
     title: "Building constracrions in Bucha",
     subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam.",
     typeOfWork: typeWork.construction,
-    backgroundImage: construction1,
+    backgroundImage: project1,
     listOfWorks: [project1, project2, project3, project4]
   },
   {

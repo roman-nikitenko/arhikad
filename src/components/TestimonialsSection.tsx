@@ -155,8 +155,6 @@ export const TestimonialsSection: React.FC = () => {
   ];
   
   const testimonialsRef = useRef<HTMLDivElement | null>(null)
-
-  console.log(testimonialsRef.current?.offsetWidth)
   
   return (
     <section className="bg-[#191919] py-20 flex flex-col overflow-hidden gap-y-14 w-full">

@@ -14,7 +14,7 @@ export const Modal: FC<ModalProps> = ({ children, closeModal, openModal }) => {
     >
       <div 
         onMouseDown={(e) => e.stopPropagation() } 
-        className="flex w-fit"
+        className="flex m-auto max-w-[80%]"
       >
         {children}
       </div>
