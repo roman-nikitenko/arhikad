@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col gap-2">
           <Contact contactTitle="arhicadnv@ukr.net" image={email} />
-          <Contact contactTitle="+38 (098) 005 54 04" image={phone} />
+          <Contact contactTitle="+38 (098) 123 45 67" image={phone} />
           <Contact contactTitle="Буча ..." image={point} />
         </div>
       </div>
