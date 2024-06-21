@@ -8,9 +8,8 @@ type FormSectionProps = {
 
 export const FormSection: React.FC<FormSectionProps> = ({ map = false }) => {
   return (
-    <section className="flex w-full items-center justify-center max-w-screen-lg gap-4">
+    <section className="flex flex-col lg:flex-row w-full md:px-0 px-4 items-center justify-center max-w-screen-lg gap-4">
       {map && <MapSection />}
-        
         <Form />
     </section>
   );

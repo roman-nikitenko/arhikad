@@ -160,7 +160,7 @@ export const TestimonialsSection: React.FC = () => {
     <section className="bg-[#191919] py-20 flex flex-col overflow-hidden gap-y-14 w-full">
       <div className="max-w-screen-lg m-auto w-full">
         <div className="flex flex-col  items-start gap-y-4">
-          <div className="bg-[color:var(--accent-color)] text-white  py-1 px-2 text-xs rounded-full">Testimonials</div>
+          <div className="bg-[color:var(--accent-color)] text-white py-1 px-2 text-xs rounded-full">Testimonials</div>
           <h1 className="uppercase text-white text-5xl ">messages from our <br/> valuable <span className="text-[var(--accent-color)]">customers</span> </h1>
         </div>
       </div>

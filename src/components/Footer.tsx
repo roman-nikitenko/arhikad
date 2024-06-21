@@ -12,16 +12,16 @@ import point from '../assets/icons/point.svg';
 
 export const Footer: React.FC = () => {
   return (
-    <div className="w-full max-w-screen-lg m-auto pt-[100px] mb-10">
-      <div className="flex w-full items-center justify-between">
-        <h1 className="text-3xl font-bold">Subscribe Newsletter <br/> For Latest Updates</h1>
-        <div className="flex h-8">
-          <input className="border outline pl-3 outline-0 w-[300px] border-black " type='text'/>
-          <button className="bg-[var(--accent-color)] text-white px-2" >Subscribe</button>
-        </div>
-      </div>
+    <div className="w-full max-w-screen-lg lg:px-0 px-4 m-auto pt-[100px] mb-10">
+      {/*<div className="flex w-full items-center justify-between">*/}
+      {/*  <h1 className="text-3xl font-bold">Subscribe Newsletter <br/> For Latest Updates</h1>*/}
+      {/*  <div className="flex h-8">*/}
+      {/*    <input className="border outline pl-3 outline-0 w-[300px] border-black " type='text'/>*/}
+      {/*    <button className="bg-[var(--accent-color)] text-white px-2" >Subscribe</button>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
       <div className="border-b-gray-300 border my-[35px]" />
-      <div className="flex justify-between">
+      <div className="flex flex-col-reverse lg:flex-row gap-7 lg:gap-0 lg:justify-between">
         <div className="flex flex-col gap-y-4 w-[300px]">
           <h2 className="text-2xl font-bold">Build masters</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ea!</p>
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
             <li>Projects</li>
           </ul>
         </div>
-        <div className="flex  flex-col gap-2">
+        <div className="flex flex-col gap-2">
           <Contact contactTitle="arhicadnv@ukr.net" image={email} />
           <Contact contactTitle="+38 (098) 005 54 04" image={phone} />
           <Contact contactTitle="Буча ..." image={point} />

@@ -20,7 +20,7 @@
 }
 
 .section-md {
-  @apply flex justify-between w-full max-w-screen-lg
+  @apply flex flex-col md:flex-row gap-4 md:justify-between w-full max-w-screen-lg
 }
 
 .nav-link {

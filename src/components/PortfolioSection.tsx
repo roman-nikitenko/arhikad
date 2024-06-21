@@ -23,15 +23,15 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projectsSect
       <Modal openModal={modalIsOpen} closeModal={() => setModalIsOpen(false)} >
         <Carousel images={activePortfolio?.listOfWorks} />
       </Modal>
-      <section ref={projectsSectionRef} className="section-md scroll-mt-20">
+      <section ref={projectsSectionRef} className="section-md w-full scroll-mt-20">
         <div className="flex flex-col gap-y-10">
-          <div className="flex flex-col gap-y-3">
+          <div className="flex md:px-0 px-4 flex-col gap-y-3">
             <p className="text-emerald-700 uppercase">/минулі проєкти</p>
             <h2 className="text-3xl font-bold">
               Результати наших робіт <br/> не потребують пояснень
             </h2>
           </div>
-          <div className="flex gap-x-6">
+          <div className="flex lg:overflow-hidden overflow-x-auto gap-x-6">
             {portfolioList.map(card => (
               <div onClick={() => clickCardHandler(card)}>
                 <PortfolioCard
