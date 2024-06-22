@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 
 type ModalProps = {
   children: ReactNode;
@@ -7,6 +7,16 @@ type ModalProps = {
 }
 
 export const Modal: FC<ModalProps> = ({ children, closeModal, openModal }) => {
+
+  useEffect(() => {
+    if (openModal) {
+      document.body.style.overflow = openModal ? 'hidden' : 'auto'
+    }
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  },[openModal])
+  
   return (
     <div
       onMouseDown={closeModal} 
