@@ -2,8 +2,6 @@ import React from 'react';
 import arrow from '../assets/icons/arrow-right.svg';
 import { typeWork } from '../types/portfolio.ts';
 
-// export type typeWork = 'Construction' | 'Design' | 'Remodeling';
-
 type PortfolioCardProps = {
   title: string;
   subTitle: string;
@@ -49,7 +47,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, subTitle, t
         </div>
       </div>
       <div className="absolute size-full z-20 bg-gradient-to-t from-black to-transparent opacity-70 p-6" />
-      <img src={backgroundImage} className="size-full object-cover z-10 group-hover:scale-110 transition" alt={`${title} image`} />
+      <img src={backgroundImage} className="size-full object-cover bg-top z-10 group-hover:scale-110 transition" alt={`${title} image`} />
     </div>
   );
 };

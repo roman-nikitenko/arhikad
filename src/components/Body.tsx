@@ -25,7 +25,7 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           <img src={plan} className="w-full z-0 h-full" alt='plan image'/>
           <div className={`absolute top-0 left-0 size-[130px] border border-[var(--accent-color)] -z-10 transform ${inViewAbout ? '-translate-x-[10px] -translate-y-[10px]' : ''} transition duration-700`} />
           <div className={`absolute z-10  top-0 w-0 h-0 transform -translate-x-full -translate-y-full transition duration-700 ${inViewAbout ? 'translate-x-0 translate-y-0' : ''}
-          border-t-[55px] border-t-white
+          border-t-[55px] border-t-[var(--background-color)]
           border-r-[55px] border-r-transparent`}/>
         </div>
         <div ref={aboutSectionRef} id="aboutSectionRef" className=" md:w-[500px] w-full flex flex-col gap-7 justify-center scroll-mt-28">
@@ -35,15 +35,15 @@ export const Body: React.FC<BodyProp> = ({ aboutSectionRef, servicesSectionRef, 
           <div className="flex md:justify-between md:flex-row flex-col w-full items-center gap-5 ">
             <div className="">
               <h3 className="bold-text"><span className="accent-text">+</span>350</h3>
-              <p className="sub-text">Executed Projects</p>
+              <p className="sub-text">Виконані проекти</p>
             </div>
             <div className="">
-              <h3 className="bold-text">12<span className="accent-text">Y</span></h3>
-              <p className="sub-text">Experience</p>
+              <h3 className="bold-text">12<span className="accent-text">Р</span></h3>
+              <p className="sub-text">Досвід</p>
             </div>
             <div className="">
               <h3 className="bold-text"><span className="accent-text">+</span>400</h3>
-              <p className="sub-text">Satisfied Clients</p>
+              <p className="sub-text">Задоволені клієнти</p>
             </div>
           </div>
           {/*<div>*/}

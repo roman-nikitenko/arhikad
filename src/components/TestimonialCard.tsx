@@ -9,7 +9,7 @@ export const TestimonialCard: React.FC<TestimonialsSectionProps> = ({ testimonia
   const { name, photo, position, date, message } = testimonial;
   
   return (
-    <div className="bg-white break-inside-avoid w-[250px] rounded-lg mb-4 gap-4 p-4">
+    <div className="bg-[var(--background-color)] break-inside-avoid w-[250px] rounded-lg mb-4 gap-4 p-4">
       <p className="text-xs mb-8">{message}</p>
       <div className="border-b border-b-gray-400 mb-2" />
       <div className="flex items-center">

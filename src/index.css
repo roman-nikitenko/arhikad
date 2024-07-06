@@ -4,7 +4,13 @@
 @tailwind utilities;
 
 :root {
-  --accent-color: #1D545B
+  --accent-color: #1D545B;
+  --background-color: #EAECE9;
+  --main-color: #0B1811;
+}
+
+body {
+  background: var(--background-color);
 }
 
 .bold-text {
