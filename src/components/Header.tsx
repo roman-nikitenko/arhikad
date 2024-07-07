@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavBar } from './NavBar.tsx';
+import banner from '../assets/bannerNew.png';
 
 type HeaderProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -38,7 +39,7 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
   }
 
   return (
-    <header className="header bg-[url('assets/plan.avif')] bg-cover h-screen w-full mb-[80px]">
+    <header style={{ backgroundImage: `url(${banner})` }} className="header bg-cover lg:bg-center bg-[-700px] bg-no-repeat h-screen w-full mb-[80px]">
       <div className="bg-[#24272B]/[0.5] h-full">
         <div className="fixed z-50 w-full">
           <div className={`backdrop-blur-sm transition-all duration-700 z-40 ${isOpen ? 'h-32' : 'h-16'} overflow-hidden  transition ${upToTop ? 'bg-emerald-900/30' : 'bg-white/10'} `}>

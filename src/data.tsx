@@ -37,4 +37,12 @@ export const portfolioList: PortfolioCardType[] = [
     backgroundImage: project3_3,
     listOfWorks: [project3_1, project3_3, project3_2]
   },
+  {
+    id: "3",
+    title: "Office remodeling in Hollywood Hills",
+    subTitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque esse hic impedit quae repudiandae ullam.",
+    typeOfWork: typeWork.remodeling,
+    backgroundImage: project3_3,
+    listOfWorks: [project3_1, project3_3, project3_2]
+  },
 ]
