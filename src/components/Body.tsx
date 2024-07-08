@@ -9,21 +9,16 @@ import { ServicesSection } from './ServicesSection.tsx';
 
 type BodyProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
-  // servicesSectionRef: React.RefObject<HTMLDivElement>;
+  servicesSectionRef: React.RefObject<HTMLDivElement>;
   projectsSectionRef: React.RefObject<HTMLDivElement>;
 }
 
-export const Body: React.FC<BodyProp> = ({ projectsSectionRef }) => {
-  // const { inView } = useInView();
-  // const { ref: aboutSection, inView: inViewAbout } = useInView();
-  // const aboutRef = useRef(null);
-  // const servicesSectionRef = useRef(null)
-  
+export const Body: React.FC<BodyProp> = ({ projectsSectionRef, aboutSectionRef, servicesSectionRef }) => {
   return (
-    <div className="max-w-screen-2xl m-auto flex flex-col items-center gap-y-[100px]">
-      <AboutUsSection />
+    <div className="max-w-screen-2xl m-auto flex flex-col overflow-hidden p-3 items-center gap-y-[100px]">
+      <AboutUsSection aboutSectionRef={aboutSectionRef} />
       <AdvantageSection />
-      <ServicesSection />
+      <ServicesSection servicesSectionRef={servicesSectionRef} />
       <QuestionSection />
       <PortfolioSection projectsSectionRef={projectsSectionRef} />
       <TestimonialsSection />

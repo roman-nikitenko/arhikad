@@ -2,12 +2,18 @@ import React from 'react';
 import plan from '../assets/plan3.jpg';
 import { motion } from 'framer-motion'
 
-export const AboutUsSection: React.FC = () => {
+type AboutUsSectionProps = {
+  aboutSectionRef: React.RefObject<HTMLDivElement>;
+}
+
+export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ aboutSectionRef }) => {
+  const transitionDelay = {
+    delay: 0.75,
+    duration: 0.7
+  }
+  
   return (
-    <section
-      className="section-md md:px-0 px-4 md:p-0 lg:overflow-auto py-3 overflow-hidden "
-      
-    >
+    <section ref={aboutSectionRef} className="section-md md:px-0 px-4 md:p-0 py-3 scroll-mt-20">
       <motion.div 
         className="h-[440px] relative "
         initial={{ opacity: 0, x: -75 }}
@@ -18,8 +24,7 @@ export const AboutUsSection: React.FC = () => {
         <motion.div
           className={`absolute top-0 left-0 -z-10`}
           initial={{ opacity: 1, x: 0, y: 0}}
-          whileInView={{ opacity: 1, x: -10, y: -10}}
-          transition={{ duration: 0.7, delay: 0.25 }}
+          whileInView={{ opacity: 1, x: -10, y: -10, transition: transitionDelay}}
         >
           <div className="size-[130px] border border-[var(--accent-color)]" />
         </motion.div>
@@ -45,20 +50,29 @@ export const AboutUsSection: React.FC = () => {
         <h2 className="text-3xl font-bold">A group of reliability and expertise contractors</h2>
         <p className="md:text-base w-full text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur corporis deleniti dicta dolor dolorem doloribus ducimus earum est ex explicabo fuga, impedit ipsum, nostrum officiis tempora unde vel voluptatum?</p>
         <div className="flex md:justify-between md:flex-row flex-col w-full items-center gap-5 ">
-          <div className="">
+          <div >
             <h3 className="bold-text"><span className="accent-text">+</span>350</h3>
-            <p className="sub-text">Виконані проекти</p>
+            <SubTextAnimation>Виконані проекти</SubTextAnimation>
           </div>
-          <div className="">
+          <div>
             <h3 className="bold-text">12<span className="accent-text">Р</span></h3>
-            <p className="sub-text">Досвід</p>
+            <SubTextAnimation>Досвід</SubTextAnimation>
           </div>
-          <div className="">
+          <div>
             <h3 className="bold-text"><span className="accent-text">+</span>400</h3>
-            <p className="sub-text">Задоволені клієнти</p>
+            <SubTextAnimation>Задоволені клієнти</SubTextAnimation>
           </div>
         </div>
       </motion.div>
     </section>
   );
 };
+
+const SubTextAnimation: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <motion.p initial={{ opacity: 0, y: -15 }} whileInView={{ opacity: 1, y: 0, transition:{ delay: 0.75, duration: 0.7 } }} className="sub-text">
+      {children}
+    </motion.p>
+  );
+};
+

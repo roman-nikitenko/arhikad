@@ -4,6 +4,7 @@ import { SectionSubTitle } from './SectionSubTitle.tsx';
 import plan2 from '../assets/plan2.jpg';
 
 export const AdvantageSection: React.FC = () => {
+  
   return (
     <motion.section
       className="section-md md:px-0 px-4"
@@ -13,12 +14,12 @@ export const AdvantageSection: React.FC = () => {
     >
       <div className="flex flex-col gap-5 md:mb-0 mb-8 pt-6">
         <SectionSubTitle title="чому ми" />
-        <h2 className="text-6xl font-bold">Made By Builders <br/> Fro Builders</h2>
-        <ul className="">
-          <li className="">Lorem ipsum dolor sit amet.</li>
-          <li className="">Lorem ipsum dolor sit amet.</li>
-          <li className="">Lorem ipsum dolor.</li>
-          <li className="">Lorem ipsum dolor sit amet.</li>
+        <h2 className="text-6xl font-bold">Переваги співпраці <br/> з нашими експертами <br/> з архітектури</h2>
+        <ul className="pl-10">
+          <li className="list-disc text-gray-500">Інноваційні дизайнерські рішення</li>
+          <li className="list-disc text-gray-500">Комплексні послуги</li>
+          <li className="list-disc text-gray-500">Фокус сталого розвитку</li>
+          <li className="list-disc text-gray-500">Клієнт-орієнтований підхід</li>
         </ul>
       </div>
       <div className="h-[440px] md:w-[370px] group relative">

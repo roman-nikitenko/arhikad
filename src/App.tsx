@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Header aboutSectionRef={aboutSectionRef} servicesSectionRef={servicesSectionRef} projectsSectionRef={projectsSectionRef} />
-      <Body aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} />
+      <Body aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} servicesSectionRef={servicesSectionRef} />
       <Footer/>
     </>
   )

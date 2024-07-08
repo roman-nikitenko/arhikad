@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavBar } from './NavBar.tsx';
-import banner from '../assets/bannerNew.png';
+import banner from '../assets/banner2.jpeg';
 
 type HeaderProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -39,7 +39,7 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
   }
 
   return (
-    <header style={{ backgroundImage: `url(${banner})` }} className="header bg-cover lg:bg-center bg-[-700px] bg-no-repeat h-screen w-full mb-[80px]">
+    <header style={{ backgroundImage: `url(${banner})` }} className="header relative bg-cover md:bg-center bg-[-300px] bg-no-repeat h-screen w-full mb-[80px]">
       <div className="bg-[#24272B]/[0.5] h-full">
         <div className="fixed z-50 w-full">
           <div className={`backdrop-blur-sm transition-all duration-700 z-40 ${isOpen ? 'h-32' : 'h-16'} overflow-hidden  transition ${upToTop ? 'bg-emerald-900/30' : 'bg-white/10'} `}>
@@ -72,7 +72,7 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
         </div>
         
         <div className="wrapper md:px-10 2xl:px-0 px-5 max-w-screen-2xl m-auto">
-          <div className="h-screen flex items-center">
+          <div className="h-screen flex items-end pb-20">
             <div className="title w-[700px] flex-col gap-y-2 text-white">
               <h1 className="text-white md:text-7xl font-bold mb-2 text-4xl">
                 One brick at a time, constructing dreams

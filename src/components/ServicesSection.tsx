@@ -1,31 +1,44 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
-import serviceImage1 from '../assets/develop.jpg';
-import serviceImage2 from '../assets/develop2.jpg';
-import serviceImage3 from '../assets/constraction.jpg';
-import {motion} from 'framer-motion'
+import serviceImage1 from '../assets/services/designAndPlane-transformed.jpeg';
+import serviceImage2 from '../assets/services/ProjectManagement-transformed.jpeg';
+import serviceImage3 from '../assets/services/constructionDocumentation-transformed.jpeg';
+import { motion, useInView } from 'framer-motion'
 
-export const ServicesSection: React.FC = () => {
+type ServicesSectionProps = {
+  servicesSectionRef: React.RefObject<HTMLDivElement>;
+}
+
+export const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesSectionRef }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref)
+  // const [view, seView] = useState()
+  
+  useEffect(() => {
+    if (isInView) {
+      console.log(isInView)
+    }
+  }, [isInView])
+  
   const services = [
     {
       id: 1,
-      title: "Residential Construction",
+      title: `Дизайн \n і планування`,
       backGroundImage: serviceImage1
     },
     {
       id: 2,
-      title: "Interior Design",
+      title: "Управління проектами",
       backGroundImage: serviceImage2
     },
     {
       id: 3,
-      title: "Interior Fitt-Out",
+      title: "Будівельна документація та адміністрування",
       backGroundImage: serviceImage3
     },
   ]
   
   const listVarian = {
-    
     inView: {
       transition: {
         staggerChildren: 0.4
@@ -48,15 +61,15 @@ export const ServicesSection: React.FC = () => {
   }
   
   return (
-    <section className="section-md md:px-0 px-4 scroll-mt-28">
+    <section ref={servicesSectionRef} className="section-md md:px-0 px-4 scroll-mt-28">
       <div className="w-full flex flex-col gap-y-8">
         <SectionSubTitle title="основні послуги" />
         <h2 className="text-6xl font-bold">Послуги Ми <br/>Надаємо</h2>
         <motion.div
+          ref={ref}
           variants={listVarian}
           initial="initial"
-          animate="inView"
-          // transition={{ duration: 0.7, delay: 0.25 }}
+          animate={isInView ? "inView" : ""}
           className="flex flex-col md:flex-row gap-3 md:justify-between md:h-[430px] h-[750px]"
         >
           {services.map(service => (
@@ -67,7 +80,7 @@ export const ServicesSection: React.FC = () => {
               className={` relative bg-cover size-full flex items-end`} 
             >
               <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent" />
-              <p className="title text-white text-3xl ml-6 mb-10 z-10 font-normal">{service.title}</p>
+              <p className="title text-white text-3xl px-6 mb-10 z-10 font-normal">{service.title}</p>
             </motion.div>
           ))}
         </motion.div>

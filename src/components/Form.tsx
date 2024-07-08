@@ -61,7 +61,7 @@ export const Form: React.FC = () => {
         <label>
           <p className="ml-1 text-[color:var(--accent-color)]">Повідомлення</p>
           <textarea
-            className="border w-full border-black resize-y max-h-[200px] outline outline-0 p-2 lg:w-[300px]"
+            className="border w-full border-black resize-y max-h-[200px] min-h-[40px] outline outline-0 p-2 lg:w-[300px]"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
