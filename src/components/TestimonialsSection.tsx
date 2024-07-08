@@ -209,7 +209,7 @@ export const TestimonialsSection: React.FC = () => {
       <div className="max-w-screen-lg m-auto w-full">
         <div className="flex flex-col  items-start gap-y-4">
           <div className="bg-[color:var(--accent-color)] text-white py-1 px-2 text-xs rounded-full">Відгуки</div>
-          <h1 className="uppercase text-white text-5xl ">повідомлення від наших <br/> цінних <span className="text-[var(--accent-color)]">клієнтів</span> </h1>
+          <h1 className="uppercase text-white text-4xl md:text-5xl">повідомлення від наших <br/> цінних <span className="text-[var(--accent-color)]">клієнтів</span> </h1>
         </div>
       </div>
       <div ref={testimonialsRef} className="columns-5 w-fit h-[460px] overflow-auto ">
