@@ -14,7 +14,7 @@ export const AdvantageSection: React.FC = () => {
     >
       <div className="flex flex-col gap-5 md:mb-0 mb-8 pt-6">
         <SectionSubTitle title="чому ми" />
-        <h2 className="text-6xl font-bold">Переваги співпраці <br/> з нашими експертами <br/> з архітектури</h2>
+        <h2 className="md:text-6xl text-5xl font-bold">Переваги співпраці <br/> з нашими експертами</h2>
         <ul className="pl-10">
           <li className="list-disc text-gray-500">Інноваційні дизайнерські рішення</li>
           <li className="list-disc text-gray-500">Комплексні послуги</li>
