@@ -12,7 +12,6 @@ type ServicesSectionProps = {
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesSectionRef }) => {
   const ref = useRef(null);
   const isInView = useInView(ref)
-  // const [view, seView] = useState()
   
   useEffect(() => {
     if (isInView) {
@@ -23,17 +22,17 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesSectio
   const services = [
     {
       id: 1,
-      title: `Дизайн \n і планування`,
+      title: `Сфера архетектури`,
       backGroundImage: serviceImage1
     },
     {
       id: 2,
-      title: "Управління проектами",
+      title: "Землевпорядні роботи",
       backGroundImage: serviceImage2
     },
     {
       id: 3,
-      title: "Будівельна документація та адміністрування",
+      title: "БТІ",
       backGroundImage: serviceImage3
     },
   ]

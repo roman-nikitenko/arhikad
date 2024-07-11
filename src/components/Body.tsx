@@ -15,7 +15,7 @@ type BodyProp = {
 
 export const Body: React.FC<BodyProp> = ({ projectsSectionRef, aboutSectionRef, servicesSectionRef }) => {
   return (
-    <div className="max-w-screen-2xl m-auto flex flex-col overflow-hidden p-3 items-center gap-y-[100px]">
+    <div className="max-w-screen-2xl m-auto flex flex-col overflow-hidden sm:p-0 p-3 items-center gap-y-[100px]">
       <AboutUsSection aboutSectionRef={aboutSectionRef} />
       <AdvantageSection />
       <ServicesSection servicesSectionRef={servicesSectionRef} />

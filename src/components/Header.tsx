@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavBar } from './NavBar.tsx';
-import banner from '../assets/banner2.jpeg';
+import banner from '../assets/land-banner.jpg';
+import { motion } from 'framer-motion'
 
 type HeaderProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -39,7 +40,20 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
   }
 
   return (
-    <header style={{ backgroundImage: `url(${banner})` }} className="header relative bg-cover md:bg-center bg-[-300px] bg-no-repeat h-screen w-full mb-[80px]">
+    <header className="header relative bg-cover md:bg-center overflow-hidden bg-[-300px] bg-no-repeat h-screen w-full mb-[80px]">
+      <motion.div
+        className="absolute inset-0 -z-10 bg-cover" 
+        style={{ backgroundImage: `url(${banner})` }}
+        initial={{
+          scale: 1.5
+        }}
+        animate={{
+          scale: 1,
+          transition: {
+            duration: 2
+          },
+        }}
+      />
       <div className="bg-[#24272B]/[0.5] h-full">
         <div className="fixed z-50 w-full">
           <div className={`backdrop-blur-sm transition-all duration-700 z-40 ${isOpen ? 'h-32' : 'h-16'} overflow-hidden  transition ${upToTop ? 'bg-emerald-900/30' : 'bg-white/10'} `}>

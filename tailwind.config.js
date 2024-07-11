@@ -59,9 +59,6 @@ export default {
       backgroundImage: {
         'herro-image': "url('/assets/building.jpg')"
       },
-      fontFamily: {
-        body: ['Inter']
-      }
     },
   },
   plugins: [],

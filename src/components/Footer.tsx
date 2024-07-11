@@ -7,6 +7,7 @@ import { Contact } from './Contact.tsx';
 import email from '../assets/icons/email.svg';
 import phone from '../assets/icons/phone.svg';
 import point from '../assets/icons/point.svg';
+import { Logo } from './Logo.tsx';
 
 
 
@@ -23,7 +24,7 @@ export const Footer: React.FC = () => {
       <div className="border-b-gray-300 border my-[35px]" />
       <div className="flex flex-col-reverse lg:flex-row gap-7 lg:gap-0 lg:justify-between">
         <div className="flex flex-col gap-y-4 w-[300px]">
-          <h2 className="text-2xl font-bold">Build masters</h2>
+          <Logo />
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ea!</p>
           <div className="flex gap-3">
             <SocialNetwork image={instagram} />
