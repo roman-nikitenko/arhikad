@@ -1,6 +1,7 @@
 import React, { useId, useRef } from 'react';
 import { Testimonial } from '../types/testimonial.ts';
 import { TestimonialCard } from './TestimonialCard.tsx';
+import { motion } from 'framer-motion'
 
 //faces
 import face from'../assets/faces/face.jpg';
@@ -212,11 +213,22 @@ export const TestimonialsSection: React.FC = () => {
           <h1 className="uppercase text-white text-4xl md:text-5xl">повідомлення від наших <br/> цінних <span className="text-[var(--accent-color)]">клієнтів</span> </h1>
         </div>
       </div>
-      <div ref={testimonialsRef} className="columns-5 w-fit h-[460px] overflow-auto ">
+      <motion.div
+        ref={testimonialsRef} 
+        className="columns-5 w-fit h-[460px] "
+        animate={{
+          x: [0, "-100%" ,"-100%", 0],
+          transition: {
+            duration: 60,
+            repeatDelay: 0,
+            repeat: Infinity,
+          }
+        }}
+      >
         {testimonials.map(testimonial => (
           <TestimonialCard testimonial={testimonial}/>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

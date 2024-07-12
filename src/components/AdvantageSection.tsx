@@ -26,7 +26,7 @@ export const AdvantageSection: React.FC = () => {
         <motion.div 
           className={`absolute border border-black size-full -z-10`}
           initial={{ opacity: 1, x: 0, y: 0 }}
-          whileInView={{ x: -20, y: -20}}
+          whileInView={{ x: -10, y: -10}}
           transition={{ duration: 0.7, delay: 0.25 }}
         />
         <img src={plan2} className="w-full h-full object-cover " alt=""/>

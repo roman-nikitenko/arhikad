@@ -13,7 +13,7 @@ export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ aboutSectionRef 
   }
   
   return (
-    <section ref={aboutSectionRef} className="section-md md:px-0 px-4 md:p-0 py-3 scroll-mt-20">
+    <section ref={aboutSectionRef} className="section-md md:px-0 px-4 scroll-mt-20">
       <motion.div 
         className="h-[440px] relative "
         initial={{ opacity: 0, x: -75 }}

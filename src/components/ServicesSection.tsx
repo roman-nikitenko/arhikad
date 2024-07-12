@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
 import serviceImage1 from '../assets/services/designAndPlane-transformed.jpeg';
-import serviceImage2 from '../assets/services/ProjectManagement-transformed.jpeg';
+import serviceImage2 from '../assets/services/bti-land.png';
 import serviceImage3 from '../assets/services/constructionDocumentation-transformed.jpeg';
 import { motion, useInView } from 'framer-motion'
 
