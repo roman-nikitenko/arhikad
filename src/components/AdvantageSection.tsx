@@ -25,7 +25,7 @@ export const AdvantageSection: React.FC = () => {
       <div className="h-[440px] md:w-[370px] group relative">
         <motion.div 
           className={`absolute border border-black size-full -z-10`}
-          initial={{ opacity: 1, x: 0, y: 0 }}
+          initial={{ opacity: 1 }}
           whileInView={{ x: -10, y: -10}}
           transition={{ duration: 0.7, delay: 0.25 }}
         />

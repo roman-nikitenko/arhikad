@@ -203,8 +203,6 @@ export const TestimonialsSection: React.FC = () => {
   
   const testimonialsRef = useRef<HTMLDivElement | null>(null)
   
-  //animate-testimonials-animation
-  
   return (
     <section className="bg-[#191919] py-20 flex flex-col overflow-hidden gap-y-14 w-full">
       <div className="max-w-screen-lg m-auto w-full">
@@ -217,7 +215,7 @@ export const TestimonialsSection: React.FC = () => {
         ref={testimonialsRef} 
         className="columns-5 w-fit h-[460px] "
         animate={{
-          x: [0, "-100%" ,"-100%", 0],
+          x: ['0%', '-100%'],
           transition: {
             duration: 60,
             repeatDelay: 0,
