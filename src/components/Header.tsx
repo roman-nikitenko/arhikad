@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavBar } from './NavBar.tsx';
 import banner from '../assets/land-banner.jpg';
 import { motion } from 'framer-motion'
+import { slogan } from '../data.tsx';
 
 type HeaderProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -89,9 +90,9 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
           <div className="h-screen flex items-end pb-20">
             <div className="title w-[700px] flex-col gap-y-2 text-white">
               <h1 className="text-white md:text-7xl font-bold mb-2 text-4xl">
-                One brick at a time, constructing dreams
+                {slogan}
               </h1>
-              <p className='mb-8 md:text-base text-sm'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis cupiditate dolore, dolorem enim esse excepturi exercitationem hic laborum mollitia nemo nobis officia porro qui rem reprehenderit rerum sed voluptate!</p>
+              <p className='mb-8 md:text-base text-sm'>Вибір нас означає партнерство з командою, яка прагне втілити ваше бачення в життя. Ми не просто архітектори; ми є вашими співавторами, людьми, які вирішують проблеми, і вашими захисниками протягом усього процесу проектування та будівництва.</p>
               {/*<Button title="Read more" onClick={() => {}} />*/}
             </div>
           </div>

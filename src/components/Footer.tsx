@@ -8,6 +8,7 @@ import email from '../assets/icons/email.svg';
 import phone from '../assets/icons/phone.svg';
 import point from '../assets/icons/point.svg';
 import { Logo } from './Logo.tsx';
+import { address, phoneNumber, slogan } from '../data.tsx';
 
 
 
@@ -25,7 +26,7 @@ export const Footer: React.FC = () => {
       <div className="flex flex-col-reverse lg:flex-row gap-7 lg:gap-0 lg:justify-between">
         <div className="flex flex-col gap-y-4 w-[300px]">
           <Logo />
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, ea!</p>
+          <p>{slogan}</p>
           <div className="flex gap-3">
             <SocialNetwork image={instagram} />
             <SocialNetwork image={facebook} />
@@ -42,8 +43,8 @@ export const Footer: React.FC = () => {
         </div>
         <div className="flex flex-col gap-2">
           <Contact contactTitle="arhicadnv@ukr.net" image={email} />
-          <Contact contactTitle="+38 (098) 123 45 67" image={phone} />
-          <Contact contactTitle="Буча ..." image={point} />
+          <Contact contactTitle={phoneNumber} image={phone} />
+          <Contact contactTitle={address} image={point} />
         </div>
       </div>
     </div>

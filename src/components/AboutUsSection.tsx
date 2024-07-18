@@ -13,7 +13,7 @@ export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ aboutSectionRef 
   }
   
   return (
-    <section ref={aboutSectionRef} className="section-md md:px-0 md:py-3 px-4 scroll-mt-20">
+    <section ref={aboutSectionRef} className="section-md md:px-0 md:py-3 px-4 ">
       <motion.div 
         className="h-[440px] relative "
         initial={{ opacity: 0, x: -75 }}
@@ -40,15 +40,13 @@ export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ aboutSectionRef 
         </motion.div>
       </motion.div>
       <motion.div
-        id="aboutSectionRef" 
-        className=" md:w-[500px] w-full flex flex-col gap-7 justify-center scroll-mt-28"
+        className=" md:w-[500px] w-full flex flex-col gap-7 justify-center "
         initial={{ opacity: 0, x: 75 }}
         whileInView={{ opacity: 1, x: 0}}
         transition={{ duration: 0.7, delay: 0.25 }}
       >
         <p className="text-emerald-700 uppercase">/Про нас</p>
-        <h2 className="text-3xl font-bold">A group of reliability and expertise contractors</h2>
-        <p className="md:text-base w-full text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consequatur corporis deleniti dicta dolor dolorem doloribus ducimus earum est ex explicabo fuga, impedit ipsum, nostrum officiis tempora unde vel voluptatum?</p>
+        <p className="md:text-base w-full text-xs">Ласкаво просимо до Архікаднв, де інновації зустрічаються з традиціями у світі архітектури. З пристрастю до дизайну та прагненням до досконалості ми створюємо простори, які надихають і довговічні вже понад 12 років років. Наша подорож почалася з простого бачення: створити середовище, яке покращить людський досвід завдяки продуманому та екологічному дизайну.</p>
         <div className="flex md:justify-between md:flex-row flex-col w-full items-center gap-5 ">
           <div >
             <h3 className="bold-text"><span className="accent-text">+</span>350</h3>
