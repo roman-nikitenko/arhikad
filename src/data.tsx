@@ -13,7 +13,7 @@ import project3_3 from './assets/portfolio/project3/Screenshot 2024-07-03.png';
 
 export const slogan = "Створення орієнтирів завтрашнього дня сьогодні"
 export const phoneNumber = "(098) 005 54 04" 
-export const address = "Вул Героїв Майдану 15, м.Буча"
+export const address = "Вул Героїв Майдану 15 офіс 58, м.Буча"
 
 export const portfolioList: PortfolioCardType[] = [
   {
