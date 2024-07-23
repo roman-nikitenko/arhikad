@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { arrowLeft, arrRight } from '../assets/iconsSVG.tsx';
 
 type CarouselProps = {
-  images: string[] | undefined
+  images: string[] | undefined;
+  setCurrent: React.Dispatch<React.SetStateAction<number>>;
+  current: number;
 }
 
-export const Carousel: React.FC<CarouselProps> = ({ images = [] }) => {
-  const [current, setCurrent] = useState<number>(0)
+export const Carousel: React.FC<CarouselProps> = ({ images = [], setCurrent, current }) => {
   
   const prev = () => {
     setCurrent(current => current === 0 ? images.length - 1 : current - 1)

@@ -1,4 +1,5 @@
 import { FC, ReactNode, useEffect } from 'react';
+import { motion } from 'framer-motion'
 
 type ModalProps = {
   children: ReactNode;
@@ -17,10 +18,24 @@ export const Modal: FC<ModalProps> = ({ children, closeModal, openModal }) => {
     }
   },[openModal])
   
+  const visible = {
+    opacity: 1,
+    display: "flex"
+  };
+  const hide = {
+    opacity: 0,
+    transitionEnd: {
+      display: "none"
+    }
+  };
+  
   return (
-    <div
+    <motion.div
+      // ${openModal ? " overflow-hidden animate-fade-in" : "animate-fade-out hidden"}
+      animate={openModal ? visible : hide}
+      initial={hide}
       onMouseDown={closeModal} 
-      className={`flex justify-center items-center fixed bg-black inset-0 z-50 bg-opacity-60 backdrop-blur-sm ${openModal ? " overflow-hidden animate-fade-in" : "animate-fade-out hidden"}`}
+      className="flex justify-center items-center fixed bg-black inset-0 z-50 bg-opacity-60 backdrop-blur-sm"
     >
       <div 
         onMouseDown={(e) => e.stopPropagation() } 
@@ -28,6 +43,6 @@ export const Modal: FC<ModalProps> = ({ children, closeModal, openModal }) => {
       >
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 };

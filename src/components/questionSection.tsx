@@ -11,7 +11,7 @@ export const QuestionSection: React.FC = () => {
   return (
     <>
       <Modal openModal={isOpenModal} closeModal={() => setIsOpenModal(false)} >
-        <div className="bg-white flex p-5">
+        <div className="bg-white flex w-[340px] p-5">
           <Form />
         </div>
       </Modal>

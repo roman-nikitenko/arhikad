@@ -12,16 +12,23 @@ type PortfolioSectionProps = {
 export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projectsSectionRef }) => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
   const [activePortfolio, setActivePortfolio] = useState<PortfolioCardType | null>(null)
+  const [current, setCurrent] = useState<number>(0)
+  
 
   const clickCardHandler = (card: PortfolioCardType) => {
     setModalIsOpen(true)
     setActivePortfolio(card)
   }
   
+  const closeHandler = () => {
+    setModalIsOpen(false)
+    setCurrent(0)
+  }
+  
   return (
     <>
-      <Modal openModal={modalIsOpen} closeModal={() => setModalIsOpen(false)} >
-        <Carousel images={activePortfolio?.listOfWorks} />
+      <Modal openModal={modalIsOpen} closeModal={closeHandler} >
+        <Carousel current={current} setCurrent={setCurrent} images={activePortfolio?.listOfWorks} />
       </Modal>
       <section ref={projectsSectionRef} className="section-md w-full scroll-mt-20">
         <div className="flex flex-col gap-y-10 xl:overflow-hidden overflow-x-auto">

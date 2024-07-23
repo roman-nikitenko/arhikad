@@ -67,8 +67,7 @@ export const Form: React.FC = () => {
           />
         </label>
       </div>
-      <div className="">
-
+      <div>
         <Button title="Відправити" type="submit" />
       </div>
     </form>
