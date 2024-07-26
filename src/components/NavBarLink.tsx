@@ -45,7 +45,7 @@ export const NavBarLink: React.FC<NavBarLinkProps> = ({ title, onClick, refSecti
           </motion.span>
         ))}
       </div>
-      <div className="absolute text-[var(--accent-color)]">
+      <div className="absolute">
         {title.split("").map((l, i) => (
           <motion.span
             key={i}

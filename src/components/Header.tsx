@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavBar } from './NavBar.tsx';
-import banner from '../assets/land-banner.jpg';
+import banner from '../assets/bannner22.png';
 import { motion } from 'framer-motion'
 import { slogan } from '../data.tsx';
 
@@ -40,10 +40,14 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
     setIsOpen(false)
   }
 
+  console.log(isOpen)
+  
+  
+
   return (
     <header className="header relative bg-cover md:bg-center overflow-hidden bg-[-300px] bg-no-repeat h-screen w-full mb-[80px]">
       <motion.div
-        className="absolute inset-0 -z-10 bg-cover" 
+        className="absolute inset-0 -z-10 bg-center bg-cover" 
         style={{ backgroundImage: `url(${banner})` }}
         initial={{
           scale: 1.5
@@ -57,9 +61,10 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
       />
       <div className="bg-[#24272B]/[0.5] h-full">
         <div className="fixed z-50 w-full">
-          <div className={`backdrop-blur-sm transition-all duration-700 z-40 ${isOpen ? 'h-32' : 'h-16'} overflow-hidden  transition ${upToTop ? 'bg-emerald-900/30' : 'bg-white/10'} `}>
+          <div className={`backdrop-blur-sm duration-700 z-40 overflow-hidden  transition ${upToTop ? 'bg-emerald-900/30' : 'bg-white/10'} `}>
+            
             <NavBar isOpen={isOpen} setIsOpen={setIsOpen} aboutSectionRef={aboutSectionRef} servicesSectionRef={servicesSectionRef} projectsSectionRef={projectsSectionRef} />
-            <div className={ `overflow-hidden transition-all duration-700` }>
+            <div className={ `overflow-hidden transition-all ${isOpen ? 'h-14' : 'h-0'} duration-700` }>
               <div className="navbar text-white">
                 <ul className="flex justify-center gap-4 py-4">
                   <li className="nav-link">
@@ -92,12 +97,14 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
               <h1 className="text-white md:text-7xl font-bold mb-2 text-4xl">
                 {slogan}
               </h1>
-              <p className='mb-8 md:text-base text-sm'>Вибір нас означає партнерство з командою, яка прагне втілити ваше бачення в життя. Ми не просто архітектори; ми є вашими співавторами, людьми, які вирішують проблеми, і вашими захисниками протягом усього процесу проектування та будівництва.</p>
+              <p className='mb-8 md:text-base text-sm'>Вибір нас означає партнерство з командою, яка прагне втілити ваше бачення в життя. Ми не просто архітектори; ми є вашими співавторами, людьми, які вирішать питання що до оформлення документів та провдуть вас від процесу проєктування до будівництва.</p>
               {/*<Button title="Read more" onClick={() => {}} />*/}
             </div>
           </div>
         </div>
+        
       </div>
+      
     </header>
   );
 };

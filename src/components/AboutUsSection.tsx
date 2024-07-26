@@ -15,12 +15,12 @@ export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ aboutSectionRef 
   return (
     <section ref={aboutSectionRef} className="section-md md:px-0 md:py-3 px-4 ">
       <motion.div 
-        className="h-[440px] relative "
+        className="h-[440px] w-[400px] bg-cover  relative"
+        style={{ backgroundImage: `url(${plan})` }}
         initial={{ opacity: 0, x: -75 }}
         whileInView={{ opacity: 1, x: 0}}
         transition={{ duration: 0.7, delay: 0.25 }}
       >
-        <img src={plan} className="w-full z-0 h-full" alt='plan image'/>
         <motion.div
           className={`absolute top-0 left-0 -z-10`}
           initial={{ opacity: 1, x: 0, y: 0}}
@@ -46,10 +46,10 @@ export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ aboutSectionRef 
         transition={{ duration: 0.7, delay: 0.25 }}
       >
         <p className="text-emerald-700 uppercase">/Про нас</p>
-        <p className="md:text-base w-full text-xs">Ласкаво просимо до Архікаднв, де інновації зустрічаються з традиціями у світі архітектури. З пристрастю до дизайну та прагненням до досконалості ми створюємо простори, які надихають і довговічні вже понад 12 років років. Наша подорож почалася з простого бачення: створити середовище, яке покращить людський досвід завдяки продуманому та екологічному дизайну.</p>
+        <p className="md:text-base w-full text-xs">Ласкаво просимо до Архікад-НВ, де інновації зустрічаються з традиціями у світі архітектури та землевпорядкування. З пристрастю до роботи та прагненням вдосконалюватися ми створюємо простори які надихають. І довговічні вже понад 12 років років. Наша подорож почалася з простого бачення: створити комфортне, яке покращить людський .</p>
         <div className="flex md:justify-between md:flex-row flex-col w-full items-center gap-5 ">
           <div >
-            <h3 className="bold-text"><span className="accent-text">+</span>350</h3>
+            <h3 className="bold-text"><span className="accent-text">+</span>300</h3>
             <SubTextAnimation>Виконані проекти</SubTextAnimation>
           </div>
           <div>

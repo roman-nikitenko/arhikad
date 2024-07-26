@@ -11,7 +11,7 @@ import project3_1 from './assets/portfolio/project3/Screenshot 2024-07-01.png';
 import project3_2 from './assets/portfolio/project3/Screenshot 2024-07-02.png';
 import project3_3 from './assets/portfolio/project3/Screenshot 2024-07-03.png';
 
-export const slogan = "Створення орієнтирів завтрашнього дня сьогодні"
+export const slogan = "Перетворення мрій у реальність"
 export const phoneNumber = "(098) 005 54 04" 
 export const address = "Вул Героїв Майдану 15 офіс 58, м.Буча"
 

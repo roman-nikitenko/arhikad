@@ -22,7 +22,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesSectio
   const services = [
     {
       id: 1,
-      title: `Сфера архетектури`,
+      title: `БТІ`,
       backGroundImage: serviceImage1
     },
     {
@@ -32,7 +32,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesSectio
     },
     {
       id: 3,
-      title: "БТІ",
+      title: "Сфера архетектури",
       backGroundImage: serviceImage3
     },
   ]

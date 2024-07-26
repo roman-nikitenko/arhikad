@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --accent-color: #1D545B;
+  --accent-color: rgb(4 120 87);
   --background-color: #EAECE9;
   --main-color: #0B1811;
 }
