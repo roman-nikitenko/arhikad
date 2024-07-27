@@ -3,14 +3,10 @@ import { NavBar } from './NavBar.tsx';
 import banner from '../assets/bannner22.png';
 import { motion } from 'framer-motion'
 import { slogan } from '../data.tsx';
+import useNoScroll from '../hooks/NoScroll.ts';
+import { SideBar } from './SideBar.tsx';
 
-type HeaderProp = {
-  aboutSectionRef: React.RefObject<HTMLDivElement>;
-  servicesSectionRef: React.RefObject<HTMLDivElement>;
-  projectsSectionRef: React.RefObject<HTMLDivElement>;
-}
-
-export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionRef, projectsSectionRef }) => {
+export const Header: React.FC = () => {
   const [upToTop, setToTop] = useState<boolean>();
   const [isOpen, setIsOpen] = useState<boolean>(false)
   
@@ -21,6 +17,8 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
     setToTop(scrollTop > heightScreen - 50)
   };
   
+  useNoScroll(isOpen);
+  
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
     return () => {
@@ -28,22 +26,18 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
     };
   });
 
-  const moveToSection = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>, refSection:React.RefObject<HTMLDivElement>) => {
-    e.preventDefault();
-    refSection.current?.scrollIntoView({
-      inline: "nearest",
-      behavior: "smooth",
-    })
-  }
+  // const moveToSection = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>, refSection:React.RefObject<HTMLDivElement>) => {
+  //   e.preventDefault();
+  //   refSection.current?.scrollIntoView({
+  //     inline: "nearest",
+  //     behavior: "smooth",
+  //   })
+  // }
+  //
+  // const closeMenu = () => {
+  //   setIsOpen(false)
+  // }
   
-  const closeMenu = () => {
-    setIsOpen(false)
-  }
-
-  console.log(isOpen)
-  
-  
-
   return (
     <header className="header relative bg-cover md:bg-center overflow-hidden bg-[-300px] bg-no-repeat h-screen w-full mb-[80px]">
       <motion.div
@@ -63,31 +57,8 @@ export const Header: React.FC<HeaderProp> = ({ aboutSectionRef, servicesSectionR
         <div className="fixed z-50 w-full">
           <div className={`backdrop-blur-sm duration-700 z-40 overflow-hidden  transition ${upToTop ? 'bg-emerald-900/30' : 'bg-white/10'} `}>
             
-            <NavBar isOpen={isOpen} setIsOpen={setIsOpen} aboutSectionRef={aboutSectionRef} servicesSectionRef={servicesSectionRef} projectsSectionRef={projectsSectionRef} />
-            <div className={ `overflow-hidden transition-all ${isOpen ? 'h-14' : 'h-0'} duration-700` }>
-              <div className="navbar text-white">
-                <ul className="flex justify-center gap-4 py-4">
-                  <li className="nav-link">
-                    <a onClick={() => {
-                      window.scroll({
-                        top: 0,
-                        behavior: 'smooth',
-                      });
-                      closeMenu()
-                    }}>Головна</a>
-                  </li>
-                  <li className="nav-link">
-                    <a onClick={(e) => { moveToSection(e, aboutSectionRef); closeMenu() }} href="">Про нас</a>
-                  </li>
-                  <li className="nav-link">
-                    <a onClick={(e) => {  moveToSection(e, servicesSectionRef); closeMenu() }} href="">Послуги</a>
-                  </li>
-                  <li className="nav-link">
-                    <a onClick={(e) =>  { moveToSection(e, projectsSectionRef); closeMenu() }} href="">Проекти</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <NavBar isOpen={isOpen} setIsOpen={setIsOpen} />
+            <SideBar isOpen={isOpen} setIsOpen={setIsOpen}  />
           </div>
         </div>
         

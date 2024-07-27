@@ -13,7 +13,7 @@ function App() {
     <>
       <CallMe />
       <Header aboutSectionRef={aboutSectionRef} servicesSectionRef={servicesSectionRef} projectsSectionRef={projectsSectionRef} />
-      <Body aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} servicesSectionRef={servicesSectionRef} />
+      <Body />
       <Footer/>
     </>
   )

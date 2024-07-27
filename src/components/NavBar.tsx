@@ -1,21 +1,19 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { Dispatch, SetStateAction, useContext } from 'react';
 import { burger, close } from '../assets/iconsSVG.tsx';
 import { Logo } from './Logo.tsx';
 import { NavBarLink } from './NavBarLink.tsx';
-import { phoneNumber } from '../data.tsx';
-import telegram from '../assets/icons/telegram.svg';
-import viber from '../assets/icons/viber.svg';
-import whatsapp from '../assets/icons/whatsapp.svg';
+import { ModalContext } from '../context/Context.tsx';
+import { moveToSection } from '../../baseFanctions.ts';
+import { PhoneSection } from './PhoneSection.tsx';
 
 type NavBarProp = {
-  aboutSectionRef: React.RefObject<HTMLDivElement>;
-  servicesSectionRef: React.RefObject<HTMLDivElement>;
-  projectsSectionRef: React.RefObject<HTMLDivElement>;
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>
 }
 
-export const NavBar: React.FC<NavBarProp> = ({ aboutSectionRef, servicesSectionRef, projectsSectionRef, isOpen, setIsOpen }) => {
+export const NavBar: React.FC<NavBarProp> = ({isOpen, setIsOpen }) => {
+  
+  const { projectsSectionRef, aboutSectionRef, servicesSectionRef } = useContext(ModalContext)
 
   const links = [
     {
@@ -39,14 +37,8 @@ export const NavBar: React.FC<NavBarProp> = ({ aboutSectionRef, servicesSectionR
       refLink: projectsSectionRef
     },
   ]
-  
-  const moveToSection = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>, refSection:React.RefObject<HTMLDivElement>) => {
-    e.preventDefault();
-    refSection.current?.scrollIntoView({
-      inline: "nearest",
-      behavior: "smooth",
-    })
-  }
+
+  console.log(projectsSectionRef, aboutSectionRef, servicesSectionRef)
   
   return (
     <div className="py-4 md:px-10 2xl:px-0 flex items-center px-5 max-w-screen-2xl m-auto justify-between">
@@ -59,31 +51,9 @@ export const NavBar: React.FC<NavBarProp> = ({ aboutSectionRef, servicesSectionR
           { links.map(link => (
             <NavBarLink title={link.title} onClick={moveToSection} refSection={link.refLink} />
           )) }
-          {/*<li className="nav-link">*/}
-          {/*  <a onClick={() => {*/}
-          {/*    window.scroll({*/}
-          {/*      top: 0,*/}
-          {/*      behavior: 'smooth',*/}
-          {/*    })*/}
-          {/*  }}>Головна</a>*/}
-          {/*</li>*/}
-          {/*<li className="nav-link">*/}
-          {/*  <a onClick={(e) => moveToSection(e, aboutSectionRef)} href="">Про нас</a>*/}
-          {/*</li>*/}
-          {/*<li className="nav-link">*/}
-          {/*  <a onClick={(e) => moveToSection(e, servicesSectionRef)} href="">Послуги</a>*/}
-          {/*</li>*/}
-          {/*<li className="nav-link">*/}
-          {/*  <a onClick={(e) => moveToSection(e, projectsSectionRef)} href="">Проекти</a>*/}
-          {/*</li>*/}
         </ul>
       </div>
-      <div className="text-white md:flex md:gap-2 items-center hidden">
-        <img src={viber} alt="" className="size-6"/>
-        <img src={telegram} alt="" className="size-7"/>
-        <img src={whatsapp} alt="" className="size-8"/>
-        <a href="tel:+3806323412345">{phoneNumber}</a>
-      </div>
+      <PhoneSection visible="hidden" />
     </div>
   );
 };

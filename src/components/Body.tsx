@@ -7,20 +7,14 @@ import { AboutUsSection } from './AboutUsSection.tsx';
 import { AdvantageSection } from './AdvantageSection.tsx';
 import { ServicesSection } from './ServicesSection.tsx';
 
-type BodyProp = {
-  aboutSectionRef: React.RefObject<HTMLDivElement>;
-  servicesSectionRef: React.RefObject<HTMLDivElement>;
-  projectsSectionRef: React.RefObject<HTMLDivElement>;
-}
-
-export const Body: React.FC<BodyProp> = ({ projectsSectionRef, aboutSectionRef, servicesSectionRef }) => {
+export const Body: React.FC = () => {
   return (
     <div className="max-w-screen-2xl m-auto flex flex-col sm:overflow-auto overflow-hidden sm:py-0 py-3 items-center gap-y-[100px]">
-      <AboutUsSection aboutSectionRef={aboutSectionRef} />
+      <AboutUsSection />
       <AdvantageSection />
-      <ServicesSection servicesSectionRef={servicesSectionRef} />
+      <ServicesSection />
       <QuestionSection />
-      <PortfolioSection projectsSectionRef={projectsSectionRef} />
+      <PortfolioSection />
       <TestimonialsSection />
       <FormSection map={true}/>
     </div>

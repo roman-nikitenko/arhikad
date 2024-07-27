@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { portfolioList } from '../data.tsx';
 import { PortfolioCard } from './PortfolioCard.tsx';
 import { PortfolioCardType } from '../types/portfolio.ts';
 import { Modal } from './Modal.tsx';
 import { Carousel } from './Carousel.tsx';
+import { ModalContext } from '../context/Context.tsx';
 
-type PortfolioSectionProps = {
-  projectsSectionRef: React.RefObject<HTMLDivElement>;
-}
-
-export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ projectsSectionRef }) => {
+export const PortfolioSection: React.FC = () => {
   const [modalIsOpen, setModalIsOpen] = useState<boolean>(false)
   const [activePortfolio, setActivePortfolio] = useState<PortfolioCardType | null>(null)
   const [current, setCurrent] = useState<number>(0)
   
+  const { projectsSectionRef } = useContext(ModalContext)
 
   const clickCardHandler = (card: PortfolioCardType) => {
     setModalIsOpen(true)

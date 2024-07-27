@@ -5,7 +5,7 @@ export const CallMe: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false)
   
   return (
-    <div className="fixed right-5 over bottom-5 md:right-10 md:bottom-10 z-20 justify-end items-center flex ">
+    <div className="fixed right-5 over bottom-5 md:right-10 md:bottom-10 z-50 justify-end items-center flex ">
       {!open && (
         <div className="absolute right-2 bg-[var(--accent-color)] animate-ping size-16 rounded-full" />
       )}

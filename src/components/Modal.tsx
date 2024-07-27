@@ -1,5 +1,6 @@
-import { FC, ReactNode, useEffect } from 'react';
+import { FC, ReactNode } from 'react';
 import { motion } from 'framer-motion'
+import useNoScroll from '../hooks/NoScroll.ts';
 
 type ModalProps = {
   children: ReactNode;
@@ -8,15 +9,8 @@ type ModalProps = {
 }
 
 export const Modal: FC<ModalProps> = ({ children, closeModal, openModal }) => {
-
-  useEffect(() => {
-    if (openModal) {
-      document.body.style.overflow = openModal ? 'hidden' : 'auto'
-    }
-    return () => {
-      document.body.style.overflow = 'auto'
-    }
-  },[openModal])
+  
+  useNoScroll(openModal);
   
   const visible = {
     opacity: 1,

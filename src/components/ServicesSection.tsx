@@ -1,17 +1,16 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
 import serviceImage1 from '../assets/services/designAndPlane-transformed.jpeg';
 import serviceImage2 from '../assets/services/bti-land.png';
 import serviceImage3 from '../assets/services/constructionDocumentation-transformed.jpeg';
 import { motion, useInView } from 'framer-motion'
+import { ModalContext } from '../context/Context.tsx';
 
-type ServicesSectionProps = {
-  servicesSectionRef: React.RefObject<HTMLDivElement>;
-}
-
-export const ServicesSection: React.FC<ServicesSectionProps> = ({ servicesSectionRef }) => {
+export const ServicesSection: React.FC = () => {
   const ref = useRef(null);
   const isInView = useInView(ref)
+  
+  const { servicesSectionRef } = useContext(ModalContext)
   
   useEffect(() => {
     if (isInView) {

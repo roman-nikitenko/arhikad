@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import plan from '../assets/plan3.jpg';
 import { motion } from 'framer-motion'
+import { ModalContext } from '../context/Context.tsx';
 
-type AboutUsSectionProps = {
-  aboutSectionRef: React.RefObject<HTMLDivElement>;
-}
-
-export const AboutUsSection: React.FC<AboutUsSectionProps> = ({ aboutSectionRef }) => {
+export const AboutUsSection: React.FC = () => {
   const transitionDelay = {
     delay: 0.75,
     duration: 0.7
   }
+  
+  const { aboutSectionRef } = useContext(ModalContext)
   
   return (
     <section ref={aboutSectionRef} className="section-md md:px-0 md:py-3 px-4 ">

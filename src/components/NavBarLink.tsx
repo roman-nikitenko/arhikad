@@ -4,7 +4,7 @@ import { scrollToTop } from '../../baseFanctions.ts';
 
 type NavBarLinkProps = {
   title: string;
-  onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, ref: React.RefObject<HTMLDivElement>) => void;
+  onClick: (ref: React.RefObject<HTMLDivElement>) => void;
   refSection: React.RefObject<HTMLDivElement> | null
 }
 
@@ -16,13 +16,7 @@ export const NavBarLink: React.FC<NavBarLinkProps> = ({ title, onClick, refSecti
     <motion.div
       initial="initial"
       whileHover="hovered" 
-      onClick={(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        if (refSection) {
-          onClick(e, refSection)
-        } else {
-          scrollToTop()
-        }
-      }} 
+      onClick={() => {refSection ? onClick(refSection) : scrollToTop()}} 
       href="" 
       className="relative block cursor-pointer overflow-hidden whitespace-nowrap leading-5"
     >
@@ -64,9 +58,6 @@ export const NavBarLink: React.FC<NavBarLinkProps> = ({ title, onClick, refSecti
           </motion.span>
         ))}
       </div>
-      {/*<div>*/}
-      {/*  <span className="text-emerald-700 absolute">{title}</span>*/}
-      {/*</div>*/}
     </motion.div>
   );
 };
