@@ -2,6 +2,7 @@ import { Header } from './components/Header.tsx';
 import { Body } from './components/Body.tsx';
 import { Footer } from './components/Footer.tsx';
 import { useRef } from 'react';
+import { CallMe } from './components/CallMe.tsx';
 
 function App() {
   const aboutSectionRef = useRef<HTMLDivElement>(null);
@@ -10,6 +11,7 @@ function App() {
   
   return (
     <>
+      <CallMe />
       <Header aboutSectionRef={aboutSectionRef} servicesSectionRef={servicesSectionRef} projectsSectionRef={projectsSectionRef} />
       <Body aboutSectionRef={aboutSectionRef} projectsSectionRef={projectsSectionRef} servicesSectionRef={servicesSectionRef} />
       <Footer/>

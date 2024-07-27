@@ -6,7 +6,7 @@ export const MapSection: React.FC = () => {
   
   return (
     <div className="w-full h-[600px]">
-      <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAP_KEY}>
+      <APIProvider apiKey="AIzaSyBo0Ss_0JCnJx1NwKjHYPHm5mZmxFf1zso">
         <Map defaultCenter={position} defaultZoom={16}>
           <Marker position={position}></Marker>
         </Map>

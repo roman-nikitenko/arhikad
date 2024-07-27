@@ -3,6 +3,9 @@ import { burger, close } from '../assets/iconsSVG.tsx';
 import { Logo } from './Logo.tsx';
 import { NavBarLink } from './NavBarLink.tsx';
 import { phoneNumber } from '../data.tsx';
+import telegram from '../assets/icons/telegram.svg';
+import viber from '../assets/icons/viber.svg';
+import whatsapp from '../assets/icons/whatsapp.svg';
 
 type NavBarProp = {
   aboutSectionRef: React.RefObject<HTMLDivElement>;
@@ -75,7 +78,10 @@ export const NavBar: React.FC<NavBarProp> = ({ aboutSectionRef, servicesSectionR
           {/*</li>*/}
         </ul>
       </div>
-      <div className="text-white hidden md:block">
+      <div className="text-white md:flex md:gap-2 items-center hidden">
+        <img src={viber} alt="" className="size-6"/>
+        <img src={telegram} alt="" className="size-7"/>
+        <img src={whatsapp} alt="" className="size-8"/>
         <a href="tel:+3806323412345">{phoneNumber}</a>
       </div>
     </div>

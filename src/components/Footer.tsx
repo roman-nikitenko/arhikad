@@ -47,7 +47,7 @@ export const Footer: React.FC = () => {
           </div>
           <div className="flex items-center gap-x-2 cursor-pointer">
             <img className="size-5" src={phone} alt="contact"/>
-            <a href="tel:+3800980055404">{phoneNumber}</a>
+            <a href="tel:+380980055404">{phoneNumber}</a>
           </div>
           <div className="flex items-center gap-x-2 cursor-pointer">
             <img className="size-5" src={point} alt="contact"/>
