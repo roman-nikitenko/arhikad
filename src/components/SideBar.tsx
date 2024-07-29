@@ -45,8 +45,8 @@ export const SideBar: React.FC<SideBarType> = ({ isOpen, setIsOpen}) => {
   
   return (
     <div className={ `overflow-hidden relative transition-all ${isOpen ? 'h-screen' : 'h-0'} duration-700` }>
-      <div className="navbar flex flex-col items-center p-4 gap-28 h-full text-white">
-        <PhoneSection visible="visible" style="flex gap-3 text-3xl" />
+      <div className="navbar flex flex-col items-center py-10 gap-28 h-full text-white">
+        <PhoneSection visible="visible" style="flex flex-col-reverse gap-3 text-3xl" />
         <ul className="flex flex-col gap-10 text-3xl">
           {links.map(link => (
             <li onClick={() => {

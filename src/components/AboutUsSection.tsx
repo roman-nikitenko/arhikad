@@ -5,7 +5,7 @@ import { ModalContext } from '../context/Context.tsx';
 
 export const AboutUsSection: React.FC = () => {
   const transitionDelay = {
-    delay: 0.75,
+    delay: 1,
     duration: 0.7
   }
   
@@ -14,21 +14,21 @@ export const AboutUsSection: React.FC = () => {
   return (
     <section ref={aboutSectionRef} className="section-md md:px-0 md:py-3 px-4 ">
       <motion.div 
-        className="h-[440px] w-[400px] bg-cover  relative"
-        style={{ backgroundImage: `url(${plan})` }}
+        className={ `h-[440px] w-[400px] bg-cover bg-no-repeat relative` }
+        style={{ backgroundImage: `url(${plan})`}}
         initial={{ opacity: 0, x: -75 }}
         whileInView={{ opacity: 1, x: 0}}
         transition={{ duration: 0.7, delay: 0.25 }}
       >
         <motion.div
-          className={`absolute top-0 left-0 -z-10`}
-          initial={{ opacity: 1, x: 0, y: 0}}
+          className="absolute top-0 -z-20 left-0"
+          initial={{ opacity: 0, x: 0, y: 0 }}
           whileInView={{ opacity: 1, x: -10, y: -10, transition: transitionDelay}}
         >
-          <div className="size-[130px] border border-[var(--accent-color)]" />
+          <div className="size-[130px] border border-black" />
         </motion.div>
         <motion.div
-          className={`absolute z-20 top-0`}
+          className={`absolute top-0`}
           initial={{ opacity: 1, x: -30, y: -30 }}
           whileInView={{ opacity: 1, x: 0, y: 0}}
           transition={{ duration: 0.7, delay: 0.25 }}

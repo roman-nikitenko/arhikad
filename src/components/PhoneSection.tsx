@@ -12,9 +12,13 @@ type PhoneSectionType = {
 export const PhoneSection: React.FC<PhoneSectionType> = ({ visible, style }) => {
   return (
     <div className={ `text-white md:flex md:gap-2 items-center ${style} ${visible}` }>
-      <img src={viber} alt="" className="size-6"/>
-      <img src={telegram} alt="" className="size-7"/>
-      <img src={whatsapp} alt="" className="size-8"/>
+      <div className="flex items-center gap-2">
+        <img src={viber} alt="" className="size-6"/>
+        <img src={telegram} alt="" className="size-7"/>
+        <img src={whatsapp} alt="" className="size-8"/>
+      </div>
+      
+      
       <a href="tel:+3806323412345">{phoneNumber}</a>
     </div>
   );
