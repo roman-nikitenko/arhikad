@@ -8,6 +8,7 @@ import phone from '../assets/icons/phone.svg';
 import point from '../assets/icons/point.svg';
 import { Logo } from './Logo.tsx';
 import { address, phoneNumber, slogan } from '../data.tsx';
+import { Navigation } from './Navigation.tsx';
 
 
 
@@ -22,7 +23,7 @@ export const Footer: React.FC = () => {
       {/*  </div>*/}
       {/*</div>*/}
       <div className="border-b-gray-300 border my-[35px]" />
-      <div className="flex flex-col-reverse lg:flex-row gap-7 lg:gap-0 lg:justify-between">
+      <div className="flex flex-col-reverse  lg:flex-row gap-7 lg:gap-0 lg:justify-between">
         <div className="flex flex-col gap-y-4 w-[300px]">
           <Logo />
           <p>{slogan}</p>
@@ -32,16 +33,9 @@ export const Footer: React.FC = () => {
             <SocialNetwork image={twitter} />
           </div>
         </div>
-        <div className="">
-          <ul className="flex flex-col gap-y-4">
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-            <li>Projects</li>
-          </ul>
-        </div>
+        <Navigation listStyle="flex-col text-emerald-700 gap-3" />
         <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-x-2 cursor-pointer">
+          <div className="flex underline-text items-center gap-x-2 cursor-pointer">
             <img className="size-5" src={email} alt="contact"/>
             <a href="mailto:arhicadnv@ukr.net">arhicadnv@ukr.net</a>
           </div>

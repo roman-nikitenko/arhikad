@@ -43,3 +43,7 @@ body {
   @apply text-white z-50 size-16 flex justify-center items-center fill-white rounded-full hover:bg-white/[0.3] transition duration-150
 }
 
+.underline-text {
+  @apply after:absolute hover:after:w-full after:h-[2px] after:rounded-full after:bg-black after:bottom-0 relative
+}
+
