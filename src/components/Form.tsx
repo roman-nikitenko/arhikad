@@ -21,12 +21,12 @@ export const Form: React.FC = () => {
   const onSubmit = (e:  React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newMessage = {
-      name,
-      phone,
-      email,
-      message
-    }
+    // const newMessage = {
+    //   name,
+    //   phone,
+    //   email,
+    //   message
+    // }
 
     setIsOpenModal(false)
     cleanForm()
