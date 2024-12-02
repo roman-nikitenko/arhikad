@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
 import serviceImage1 from '../assets/services/designAndPlane-transformed.jpeg';
 import serviceImage2 from '../assets/services/bti-land.png';
@@ -12,17 +12,17 @@ export const ServicesSection: React.FC = () => {
   
   const { servicesSectionRef } = useContext(ModalContext)
   
-  useEffect(() => {
-    if (isInView) {
-      console.log(isInView)
-    }
-  }, [isInView])
+  // useEffect(() => {
+  //   if (isInView) {
+  //     console.log(isInView)
+  //   }
+  // }, [isInView])
   
   const services = [
     {
       id: 1,
-      title: `БТІ`,
-      backGroundImage: serviceImage1
+      title: "Сфера архетектури",
+      backGroundImage: serviceImage3
     },
     {
       id: 2,
@@ -31,8 +31,8 @@ export const ServicesSection: React.FC = () => {
     },
     {
       id: 3,
-      title: "Сфера архетектури",
-      backGroundImage: serviceImage3
+      title: "БТІ",
+      backGroundImage: serviceImage1
     },
   ]
   

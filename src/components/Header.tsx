@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavBar } from './NavBar.tsx';
-import banner from '../assets/bannner22.png';
+import banner from '../assets/main-banner.png';
 import { motion } from 'framer-motion'
 import { slogan } from '../data.tsx';
 import useNoScroll from '../hooks/NoScroll.ts';
@@ -64,14 +64,24 @@ export const Header: React.FC = () => {
         
         <div className="wrapper md:px-10 2xl:px-0 px-5 max-w-screen-2xl m-auto">
           <div className="h-screen flex items-end pb-20">
-            <div className="title w-[700px] flex-col gap-y-2 text-white">
+            <motion.div
+             className="title w-[700px] flex-col gap-y-2 text-white"
+             initial={{ y: 75, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 1, delay: 2 }}
+             >
               <h1 className="text-white md:text-7xl font-bold mb-2 text-4xl">
                 {slogan}
               </h1>
-              <p className='mb-8 md:text-base text-sm'>
+              <motion.p
+               className='mb-8 md:text-base text-sm'
+               initial={{ y: 75, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 0.7, delay: 2.4 }}
+               >
                 Вибір нас означає партнерство з командою, яка прагне втілити ваше бачення в життя. Ми не просто архітектори; ми — ваші співавтори, люди, які вирішать питання щодо оформлення документів та проведуть вас від процесу проєктування до будівництва.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
           </div>
         </div>
       </div>

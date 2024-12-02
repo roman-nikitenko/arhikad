@@ -28,7 +28,6 @@ export const Form: React.FC = () => {
       message
     }
 
-    console.log(newMessage)
     setIsOpenModal(false)
     cleanForm()
   }
