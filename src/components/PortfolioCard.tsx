@@ -11,17 +11,17 @@ type PortfolioCardProps = {
   onClick?: () => void;
 }
 
-export const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, subTitle, typeOfWork, backgroundImage, onClick }) => {
+export const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, typeOfWork, backgroundImage, onClick }) => {
   
   const correctIconWork = (type: string) => {
     const lowerCaseType = type.toLowerCase();
     
     switch (lowerCaseType) {
-      case "construction":
+      case "будівництво":
         return constructionSVG;
-      case "design":
+      case "дизайн":
         return designSVG;
-      case "remodeling":
+      case "реконструкція":
         return remodelingSVG;
     }
   } 
@@ -32,7 +32,6 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, subTitle, t
       <div className="absolute flex items-end p-4 z-30 size-full">
         <div className="text-white">
           <h3 className="text-xl font-bold">{title}</h3>
-          <p className="text-xs">{subTitle}</p>
           <div className="border-b border-b-gray-500 mt-5 mb-3" />
           <div className="flex justify-between items-center">
             <div className="flex gap-x-2 items-center">

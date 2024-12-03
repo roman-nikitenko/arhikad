@@ -1,7 +1,7 @@
 export enum typeWork {
-  construction = "Construction",
-  design = "Design",
-  remodeling = "Remodeling",
+  construction = "Будівництво",
+  design = "Дизайн",
+  remodeling = "Реконструкція",
 }
 
 export type PortfolioCardType = {

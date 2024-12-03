@@ -62,7 +62,7 @@ export const ServicesSection: React.FC = () => {
     <section ref={servicesSectionRef} className="section-md md:px-0 px-4 scroll-mt-28">
       <div className="w-full flex flex-col gap-y-8">
         <SectionSubTitle title="основні послуги" />
-        <h2 className="text-6xl font-bold">Послуги Ми <br/>Надаємо</h2>
+        <h2 className="text-6xl font-bold">Послуги</h2>
         <motion.div
           ref={ref}
           variants={listVarian}

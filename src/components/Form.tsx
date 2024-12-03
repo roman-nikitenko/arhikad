@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { InputField } from './InputField.tsx';
 import { Button } from './Button.tsx';
 import { ModalContext } from '../context/Context.tsx';
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const Form: React.FC = () => {
   const [name, setName] = useState<string>('');
@@ -9,7 +10,7 @@ export const Form: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
   
-  const { setIsOpenModal } = useContext(ModalContext)
+  const { setIsOpenModal } = useContext(ModalContext);
 
   const cleanForm = () => {
     setName('');
@@ -66,6 +67,13 @@ export const Form: React.FC = () => {
           />
         </label>
       </div>
+      <ReCAPTCHA
+        sitekey="6Lcrf5EqAAAAAIuFCMlqTZxSBVgMbn0AAa6F4SLt"
+        onChange={val => {
+          console.log(val);
+          
+        }}
+      />
       <div>
         <Button title="Відправити" type="submit" />
       </div>
