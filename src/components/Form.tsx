@@ -68,10 +68,9 @@ export const Form: React.FC = () => {
         </label>
       </div>
       <ReCAPTCHA
-        sitekey="6Lcrf5EqAAAAAIuFCMlqTZxSBVgMbn0AAa6F4SLt"
+        sitekey="6LdA-5EqAAAAAA_JEVpxzqiAbqVQ2Oc_q9WLDm-r"
         onChange={val => {
           console.log(val);
-          
         }}
       />
       <div>
