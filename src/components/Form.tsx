@@ -32,6 +32,9 @@ export const Form: React.FC = () => {
     cleanForm()
   }
   
+  console.log(import.meta.env.VITE_CAPTURE_KEY);
+  
+  
   return (
     <form className="flex flex-1 flex-col gap-y-4 w-full" onSubmit={onSubmit}>
       <h1 className="m-auto text-2xl mb-8" >Задай запитання</h1>
