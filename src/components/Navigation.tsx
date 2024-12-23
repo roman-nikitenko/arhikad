@@ -37,7 +37,7 @@ export const Navigation: React.FC<NavigationProps> = ({ listStyle }) => {
     <div className="navbar text-white hidden md:block">
       <ul className={ `flex gap-10 ${ listStyle }` }>
         { links.map(link => (
-          <NavBarLink title={link.title} onClick={moveToSection} refSection={link.refLink} />
+          <NavBarLink key={link.id} title={link.title} onClick={moveToSection} refSection={link.refLink} />
         )) }
       </ul>
     </div>

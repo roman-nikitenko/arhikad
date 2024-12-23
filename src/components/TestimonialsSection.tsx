@@ -224,7 +224,7 @@ export const TestimonialsSection: React.FC = () => {
         }}
       >
         {testimonials.map(testimonial => (
-          <TestimonialCard testimonial={testimonial}/>
+          <TestimonialCard key={testimonial.id} testimonial={testimonial}/>
         ))}
       </motion.div>
     </section>

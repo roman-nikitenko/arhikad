@@ -38,7 +38,7 @@ export const PortfolioSection: React.FC = () => {
           </div>
           <div className="flex overflow-x-auto gap-x-6">
             {portfolioList.map(card => (
-              <div onClick={() => clickCardHandler(card)}>
+              <div key={card.id} onClick={() => clickCardHandler(card)}>
                 <PortfolioCard
                   title={card.title}
                   typeOfWork={card.typeOfWork}

@@ -1,13 +1,30 @@
-import React from 'react';
+import React from "react";
 
 type ButtonProp = {
   title: string;
   onClick?: () => void;
-  type?: 'submit' | 'reset' | 'button' | undefined;
-}
+  type?: "submit" | "reset" | "button" | undefined;
+  isDisabled?: boolean;
+};
 
-export const Button: React.FC<ButtonProp> = ({ title, onClick, type }) => {
+export const Button: React.FC<ButtonProp> = ({
+  title,
+  onClick,
+  type,
+  isDisabled,
+}) => {
   return (
-    <button className="px-5 py-3 bg-[color:var(--accent-color)] text-white hover:bg-emerald-700 transition" type={type ? type : 'button'} onClick={onClick} >{title}</button>
+    <button
+      disabled={isDisabled}
+      className={`px-5 py-3 ${
+        isDisabled
+          ? "bg-[color:var(--disabled-button)]"
+          : "bg-[color:var(--accent-color)] hover:bg-emerald-700 transition"
+      }  text-white `}
+      type={type ? type : "button"}
+      onClick={onClick}
+    >
+      {title}
+    </button>
   );
 };
