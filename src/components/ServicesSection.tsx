@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { SectionSubTitle } from './SectionSubTitle.tsx';
 import serviceImage1 from '../assets/services/designAndPlane-transformed.jpeg';
-import serviceImage2 from '../assets/services/bti-land.png';
+import serviceImage2 from '../assets/services/bucha-lend.jpg';
 import serviceImage3 from '../assets/services/constructionDocumentation-transformed.jpeg';
 import { motion, useInView } from 'framer-motion'
 import { ModalContext } from '../context/Context.tsx';
@@ -75,10 +75,10 @@ export const ServicesSection: React.FC = () => {
               variants={listVarianItem}
               key={service.id}
               style={{ backgroundImage: `url(${service.backGroundImage})` }} 
-              className={` relative bg-cover size-full flex items-end`} 
+              className={`relative bg-cover bg-center bg-no-repeat size-full flex items-end`} 
             >
               <div className="absolute size-full bg-gradient-to-t from-black opacity-70 to-transparent" />
-              <p className="title text-white text-3xl px-6 mb-10 z-10 font-normal">{service.title}</p>
+              <p className="title text-[var(--light)] text-3xl px-6 mb-10 z-10 font-normal">{service.title}</p>
             </motion.div>
           ))}
         </motion.div>

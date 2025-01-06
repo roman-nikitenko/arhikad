@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProp> = ({
         isDisabled
           ? "bg-[color:var(--disabled-button)]"
           : "bg-[color:var(--accent-color)] hover:bg-emerald-700 transition"
-      }  text-white `}
+      }  text-[var(--light)] `}
       type={type ? type : "button"}
       onClick={onClick}
     >

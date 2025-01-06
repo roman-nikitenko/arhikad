@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
         </div>
         <Navigation listStyle="flex-col text-emerald-700 gap-3" />
         <div className="flex flex-col gap-2">
-          <div className="flex underline-text items-center gap-x-2 cursor-pointer">
+          <div className="flex items-center gap-x-2 cursor-pointer">
             <img className="size-5" src={email} alt="contact"/>
             <a href="mailto:arhicadnv@ukr.net">arhicadnv@ukr.net</a>
           </div>
@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
           </div>
           <div className="flex items-center gap-x-2 cursor-pointer">
             <img className="size-5" src={point} alt="contact"/>
-            <a target="_blank" href="https://www.google.com/maps/place/Vul.+Heroyiv+Maydanu,+15,+Bucha,+Kyivs'ka+oblast,+08292/@50.5519049,30.2141531,18z/data=!3m1!4b1!4m6!3m5!1s0x472b31b8c0de22a1:0xbd398d80c7ce2c99!8m2!3d50.5519049!4d30.215133!16s%2Fg%2F11vq9mn492?entry=ttu">{address}</a>
+            <a target="_blank" href="https://www.google.com/maps/place/Vul.+Heroyiv+Maydanu,+15,+Bucha,+Kyivs'ka+oblast,+08292/@50.550914, 30.214758,18z/data=!3m1!4b1!4m6!3m5!1s0x472b31b8c0de22a1:0xbd398d80c7ce2c99!8m2!3d50.5519049!4d30.215133!16s%2Fg%2F11vq9mn492?entry=ttu">{address}</a>
           </div>
           {/*<Contact contactTitle="arhicadnv@ukr.net" image={email} />*/}
           {/*<Contact contactTitle={phoneNumber} image={phone} />*/}

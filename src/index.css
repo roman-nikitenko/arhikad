@@ -6,9 +6,11 @@
 
 :root {
   --accent-color: rgb(4 120 87);
-  --background-color: #EAECE9;
+  --background-color: #73d3d3;
   --main-color: #0B1811;
   --disabled-button: #D1D5DB;
+  --dark: #4a4a4a;
+  --light: #d9fbfb;
 }
 
 body {
@@ -21,7 +23,7 @@ body {
 }
 
 .sub-text {
-  @apply text-[12px] text-gray-500
+  @apply text-[12px] text-[var(--dark)]
 }
 
 .accent-text {
@@ -37,7 +39,7 @@ body {
 }
 
 .input-form {
-  @apply border border-black pl-2 outline outline-0 w-full p-1
+  @apply border border-[var(--dark)] bg-[var(--light)] pl-2 outline outline-0 w-full p-1
 }
 
 .carousel-button {

@@ -207,8 +207,8 @@ export const TestimonialsSection: React.FC = () => {
     <section className="bg-[#191919] py-20 flex flex-col overflow-hidden gap-y-14 w-full">
       <div className="max-w-screen-lg m-auto w-full">
         <div className="flex flex-col  items-start gap-y-4">
-          <div className="bg-[color:var(--accent-color)] text-white py-1 px-2 text-xs rounded-full">Відгуки</div>
-          <h1 className="uppercase text-white text-4xl md:text-5xl">повідомлення від наших <br/> цінних <span className="text-[var(--accent-color)]">клієнтів</span> </h1>
+          <div className="bg-[color:var(--accent-color)] text-[var(--light)] py-1 px-2 text-xs rounded-full">Відгуки</div>
+          <h1 className="uppercase text-[var(--light)] text-4xl md:text-5xl">повідомлення від наших <br/> цінних <span className="text-[var(--accent-color)]">клієнтів</span> </h1>
         </div>
       </div>
       <motion.div

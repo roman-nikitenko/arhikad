@@ -105,7 +105,7 @@ export const Form: React.FC = () => {
             Повідомлення
           </p>
           <textarea
-            className="border w-full border-black resize-y max-h-[200px] min-h-[40px] outline outline-0 p-2 lg:w-[300px]"
+            className="border w-full border-[var(--dark)] bg-[var(--light)] resize-y max-h-[200px] min-h-[40px] outline outline-0 p-2 lg:w-[300px]"
             value={message}
             name="message"
             onChange={(e) => setMessage(e.target.value)}

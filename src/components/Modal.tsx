@@ -25,7 +25,6 @@ export const Modal: FC<ModalProps> = ({ children, closeModal, openModal }) => {
   
   return (
     <motion.div
-      // ${openModal ? " overflow-hidden animate-fade-in" : "animate-fade-out hidden"}
       animate={openModal ? visible : hide}
       initial={hide}
       onMouseDown={closeModal} 

@@ -11,7 +11,7 @@ type PhoneSectionType = {
 
 export const PhoneSection: React.FC<PhoneSectionType> = ({ visible, style }) => {
   return (
-    <div className={ `text-white md:flex md:gap-2 items-center ${style} ${visible}` }>
+    <div className={ `text-[var(--light)] md:flex md:gap-2 items-center ${style} ${visible}` }>
       <div className="flex items-center gap-2">
         <img src={viber} alt="" className="size-6"/>
         <img src={telegram} alt="" className="size-7"/>

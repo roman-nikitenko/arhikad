@@ -30,7 +30,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, typeOfWork,
   return (
     <div onClick={onClick} className="w-[300px] h-[330px] group relative cursor-pointer overflow-hidden">
       <div className="absolute flex items-end p-4 z-30 size-full">
-        <div className="text-white">
+        <div className="text-[var(--light)]">
           <h3 className="text-xl font-bold">{title}</h3>
           <div className="border-b border-b-gray-500 mt-5 mb-3" />
           <div className="flex justify-between items-center">

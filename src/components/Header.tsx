@@ -70,11 +70,11 @@ export const Header: React.FC = () => {
              animate={{ y: 0, opacity: 1 }}
              transition={{ duration: 1, delay: 2 }}
              >
-              <h1 className="text-white md:text-7xl font-bold mb-2 text-4xl">
+              <h1 className="text-[var(--light)] md:text-7xl font-bold mb-2 text-4xl">
                 {slogan}
               </h1>
               <motion.p
-               className='mb-8 md:text-base text-sm'
+               className='mb-8 md:text-base text-sm text-[var(--light)]'
                initial={{ y: 75, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.7, delay: 2.4 }}
