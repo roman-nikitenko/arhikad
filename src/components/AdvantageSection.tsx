@@ -29,7 +29,7 @@ export const AdvantageSection: React.FC = () => {
           whileInView={{ x: -10, y: -10}}
           transition={{ duration: 0.7, delay: 0.25 }}
         />
-        <img src={plan2} className="w-full h-full object-cover " alt=""/>
+        <img loading="lazy" src={plan2} className="w-full h-full object-cover " alt=""/>
       </div>
     </motion.section>
   );

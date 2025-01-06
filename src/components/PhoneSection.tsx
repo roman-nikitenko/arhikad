@@ -13,9 +13,9 @@ export const PhoneSection: React.FC<PhoneSectionType> = ({ visible, style }) => 
   return (
     <div className={ `text-[var(--light)] md:flex md:gap-2 items-center ${style} ${visible}` }>
       <div className="flex items-center gap-2">
-        <img src={viber} alt="" className="size-6"/>
-        <img src={telegram} alt="" className="size-7"/>
-        <img src={whatsapp} alt="" className="size-8"/>
+        <img loading="lazy" src={viber} alt="" className="size-6"/>
+        <img loading="lazy" src={telegram} alt="" className="size-7"/>
+        <img loading="lazy" src={whatsapp} alt="" className="size-8"/>
       </div>
       
       

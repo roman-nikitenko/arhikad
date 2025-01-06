@@ -13,7 +13,7 @@ export const CallMe: React.FC = () => {
       <div className={`bg-[var(--accent-color)] relative flex transition-all duration-700 justify-end items-center ${open ? 'w-[300px]' : 'w-20' }  overflow-hidden h-20 rounded-full`}>
         <a href="tel:+3806323412345" className="text-[var(--light)] whitespace-nowrap overflow-hidden float-none inline-block absolute text-xl left-5 z-10">{phoneNumber}</a>
         <div onClick={() => setOpen(prevState => !prevState)} className="cursor-pointer rounded-full bg-[var(--accent-color)] z-20 size-20 flex justify-center items-center">
-          <img src={call} alt="phone image" className="size-10"/>
+          <img loading="lazy" src={call} alt="phone image" className="size-10"/>
         </div>
       </div>
     </div>

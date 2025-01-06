@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { InputField } from "./InputField.tsx";
 import { Button } from "./Button.tsx";
 import { ModalContext } from "../context/Context.tsx";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const Form: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -12,7 +12,7 @@ export const Form: React.FC = () => {
   const [message, setMessage] = useState<string>("");
   const [token, setToken] = useState<string | null>(null);
   const [error, setError] = useState<boolean>(false);
-  const captchaRef = useRef<HCaptcha | null>(null);
+  const captchaRef = useRef<ReCAPTCHA | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const { setIsOpenModal } = useContext(ModalContext);
@@ -20,7 +20,7 @@ export const Form: React.FC = () => {
   const emailJsServiceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const emailJsTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const emailJsPublickKey = import.meta.env.VITE_EMAILJS_PUBLICK_KEY;
-  const captchaKey = import.meta.env.VITE_HCAPTCHA_SITE_KEY;
+  const captchaKey = import.meta.env.VITE_GOOGLE_RECAPTCHA_KEY;
 
   const cleanForm = () => {
     setName("");
@@ -28,7 +28,10 @@ export const Form: React.FC = () => {
     setEmail("");
     setMessage("");
     setToken(null);
-    captchaRef.current?.resetCaptcha();
+    
+    if (captchaRef.current) {
+      captchaRef.current.reset();
+    }
   };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -53,12 +56,6 @@ export const Form: React.FC = () => {
     if (e.target.value.length > 12) return;
 
     setPhone(e.target.value);
-  };
-
-  const onLoad = () => {
-    if (token) {
-      captchaRef.current?.execute();
-    }
   };
 
   useEffect(() => {
@@ -112,12 +109,10 @@ export const Form: React.FC = () => {
           />
         </label>
       </div>
-      <HCaptcha
-        sitekey={captchaKey}
-        onLoad={onLoad}
-        onVerify={setToken}
+      <ReCAPTCHA
         ref={captchaRef}
-        onExpire={() => setToken(null)}
+        sitekey={captchaKey}
+        onChange={(token) => setToken(token)}
       />
       <div>
         <Button isDisabled={!error} title="Відправити" type="submit" />

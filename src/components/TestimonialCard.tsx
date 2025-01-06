@@ -14,7 +14,7 @@ export const TestimonialCard: React.FC<TestimonialsSectionProps> = ({ testimonia
       <div className="border-b border-b-gray-400 mb-2" />
       <div className="flex items-center">
         <div className="flex gap-2 w-full items-center">
-          <img className="rounded-full object-cover object-top size-[35px]" src={photo} alt="photo" />
+          <img loading="lazy" className="rounded-full object-cover object-top size-[35px]" src={photo} alt="photo" />
           <div className="flex gap-0.5 flex-col text-xs">
             <p className="font-bold">{name}</p>          
           </div>
